@@ -1,0 +1,2696 @@
+<!doctype html>
+<html lang="ru" data-app="database-exam-study" data-version="1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Site de estudo de bases de dados para o exame do ISTEC"
+    />
+    <title>Bases de Dados — preparação para o exame do ISTEC</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+</head>
+  <body id="top" data-page="home" data-progress="0">
+    <a href="#main-content" class="skip-link">Ir para o conteúdo</a>
+    <header class="site-header" role="banner" data-section="header">
+      <a class="brand" href="#top" aria-label="Página inicial"
+        ><strong>Bases de Dados</strong><span>ISTEC Exam Study</span></a
+      >
+      <button
+        type="button"
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        data-action="toggle-menu"
+      >
+        Menu
+      </button>
+      <nav id="primary-navigation" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#study-map">Plano</a></li>
+          <li><a href="#sql-foundations">SQL</a></li>
+          <li><a href="#mysql">MySQL</a></li>
+          <li><a href="#clusters">Clusters</a></li>
+          <li><a href="#nosql">NoSQL</a></li>
+          <li><a href="#exam">Exame</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main-content" tabindex="-1">
+      <section class="hero" data-section="hero" aria-labelledby="hero-title">
+        <p>Sistema de gestão de bases de dados</p>
+        <h1 id="hero-title">Curso completo de bases de dados num só dia</h1>
+        <p>
+          SQL, Transact-SQL, MySQL, InnoDB, replicação, clusters, MongoDB, NoSQL
+          e Neo4j em português simples.
+        </p>
+        <a href="#study-map">Começar a estudar</a>
+        <a href="#exam">Ir para o exame</a>
+      </section>
+      <section
+        class="study-tools"
+        aria-labelledby="tools-title"
+        data-section="tools"
+      >
+        <h2 id="tools-title">Ferramentas de estudo</h2>
+        <form role="search" data-search-form>
+          <label for="site-search">Pesquisar por tema</label
+          ><input
+            id="site-search"
+            type="search"
+            placeholder="GROUP BY, MongoDB, trigger"
+            data-search-input
+          /><button type="submit">Procurar</button
+          ><button type="reset">Limpar</button
+          ><output aria-live="polite" data-search-output
+            >Todos os temas estão a ser apresentados.</output
+          >
+        </form>
+        <div class="progress-panel">
+          <h3>Progresso</h3>
+          <progress max="100" value="0" data-progress="course">0%</progress
+          ><output aria-live="polite">0%</output>
+        </div>
+        <form data-filter-form>
+          <fieldset>
+            <legend>Filtro</legend>
+            <label><input type="checkbox" data-filter="sql" />SQL</label
+            ><label><input type="checkbox" data-filter="mysql" />MySQL</label
+            ><label
+              ><input type="checkbox" data-filter="cluster" />Clusters</label
+            ><label><input type="checkbox" data-filter="nosql" />NoSQL</label>
+          </fieldset>
+        </form>
+      </section>
+      <section
+        id="study-map"
+        class="study-map"
+        data-section="study-map"
+        aria-labelledby="study-map-title"
+      >
+        <h2 id="study-map-title">Plano de estudo</h2>
+        <ol>
+          <li>
+            <a href="#dbms" data-title="База данных и СУБД"
+              >Base de dados e SGBD</a
+            >
+          </li>
+          <li>
+            <a href="#sql-foundations" data-title="SQL и Transact-SQL"
+              >SQL e Transact-SQL</a
+            >
+          </li>
+          <li>
+            <a href="#queries" data-title="SELECT и фильтрация данных"
+              >SELECT e filtragem de dados</a
+            >
+          </li>
+          <li>
+            <a href="#joins" data-title="Связи таблиц и JOIN"
+              >Relações entre tabelas e JOIN</a
+            >
+          </li>
+          <li>
+            <a href="#aggregation" data-title="Агрегация данных"
+              >Agregação de dados</a
+            >
+          </li>
+          <li>
+            <a href="#transactions" data-title="Транзакции и серверная логика"
+              >Transações e lógica do servidor</a
+            >
+          </li>
+          <li>
+            <a href="#mysql" data-title="MySQL и InnoDB">MySQL e InnoDB</a>
+          </li>
+          <li>
+            <a href="#clusters" data-title="Репликация и кластеры MySQL"
+              >Replicação e clusters MySQL</a
+            >
+          </li>
+          <li>
+            <a href="#nosql" data-title="NoSQL, MongoDB и Neo4j"
+              >NoSQL, MongoDB e Neo4j</a
+            >
+          </li>
+          <li><a href="#exam">Verificação de exame</a></li>
+        </ol>
+      </section>
+      <section
+        id="dbms"
+        class="course-section"
+        data-section="dbms"
+        data-category="fundamentals"
+        data-title="База данных и СУБД"
+        aria-labelledby="dbms-title"
+      >
+        <header class="section-header">
+          <p>Secção 1</p>
+          <h2 id="dbms-title">Base de dados e SGBD</h2>
+        </header>
+        <article
+          class="topic-card"
+          id="topic-database"
+          data-topic="database"
+          data-search="Что такое база данных База данных — организованный набор связанных данных, который можно хранить, искать, изменять и удалять."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>O que é uma base de dados</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            Uma base de dados é um conjunto organizado de dados relacionados
+            que pode ser armazenado, pesquisado, alterado e eliminado.
+          </p>
+          <div class="topic-card__content">
+            <p>
+              Numa base de dados relacional, os dados são normalmente
+              representados em tabelas. Uma tabela é composta por colunas e
+              linhas. A coluna descreve uma característica, e a linha
+              representa um objeto.
+            </p>
+            <aside class="callout callout--memory" aria-label="Para memorizar">
+              <h4>Para memorizar</h4>
+              <p>Coluna = característica. Linha = registo concreto.</p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>
+              Uma base de dados é um conjunto organizado de dados relacionados
+              que pode ser armazenado, pesquisado, alterado e eliminado.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-dbms"
+          data-topic="dbms"
+          data-search="Что такое СУБД СУБД — система управления базами данных. Она организует и управляет одной или несколькими базами данных."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>O que é um SGBD</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            O SGBD é o sistema de gestão de bases de dados. Organiza e gere
+            uma ou várias bases de dados.
+          </p>
+          <div class="topic-card__content">
+            <h4>Para que serve</h4>
+            <ul>
+              <li>criar bases de dados e tabelas;</li>
+              <li>guardar e alterar dados;</li>
+              <li>pesquisar informação;</li>
+              <li>gerir o acesso;</li>
+              <li>garantir a integridade e as transações;</li>
+              <li>assegurar a redundância e a disponibilidade.</li>
+            </ul>
+            <aside class="callout callout--exam">
+              <h4>No exame</h4>
+              <p>
+                <strong>Resposta:</strong> os SGBD foram criados para
+                organizar e gerir uma ou várias bases de dados.
+              </p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>
+              O SGBD é o sistema de gestão de bases de dados. Organiza e gere
+              uma ou várias bases de dados.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-relational"
+          data-topic="relational"
+          data-search="Реляционная модель, OLTP и OLAP Реляционная база хранит данные в таблицах, а связи строятся с помощью ключей."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Modelo relacional, OLTP e OLAP</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            Uma base de dados relacional guarda os dados em tabelas, e as
+            relações são construídas através de chaves.
+          </p>
+          <div class="topic-card__content">
+            <dl>
+              <dt>OLTP</dt>
+              <dd>
+                Muitas operações diárias curtas: compra, reserva,
+                transferência.
+              </dd>
+              <dt>OLAP</dt>
+              <dd>
+                Consultas analíticas, relatórios e estatísticas sobre
+                grandes volumes de dados.
+              </dd>
+            </dl>
+            <aside class="callout callout--compare">
+              <h4>Qual é a diferença</h4>
+              <p>
+                O OLTP processa transações. O OLAP analisa os dados
+                acumulados.
+              </p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>
+              Uma base de dados relacional guarda os dados em tabelas, e as
+              relações são construídas através de chaves.
+            </p>
+          </aside>
+        </article>
+      </section>
+      <section
+        id="sql-foundations"
+        class="course-section"
+        data-section="sql-foundations"
+        data-category="sql"
+        data-title="SQL и Transact-SQL"
+        aria-labelledby="sql-foundations-title"
+      >
+        <header class="section-header">
+          <p>Secção 2</p>
+          <h2 id="sql-foundations-title">SQL e Transact-SQL</h2>
+        </header>
+        <article
+          class="topic-card"
+          id="topic-sql"
+          data-topic="sql"
+          data-search="Что такое SQL SQL — язык определения структуры базы, управления данными и получения информации."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>O que é o SQL</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            O SQL é a linguagem para definir a estrutura da base de dados,
+            gerir dados e obter informação.
+          </p>
+          <div class="topic-card__content">
+            <p>
+              O Transact-SQL, ou T-SQL, é a implementação do SQL no Microsoft
+              SQL Server. Baseia-se no SQL-92 e acrescenta variáveis,
+              condições, ciclos, funções e procedimentos.
+            </p>
+            <aside class="callout callout--short">
+              <h4>Muito resumidamente</h4>
+              <p>O SQL é a linguagem geral. O T-SQL é a variante do SQL para o SQL Server.</p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>
+              O SQL é a linguagem para definir a estrutura da base de dados,
+              gerir dados e obter informação.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-ddl"
+          data-topic="ddl"
+          data-search="DDL — определение объектов DDL создаёт, изменяет и удаляет структуру базы данных."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>DDL — definição de objetos</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            O DDL cria, altera e elimina a estrutura da base de dados.
+          </p>
+          <div class="topic-card__content">
+            <table>
+              <caption>
+                Comandos DDL
+              </caption>
+              <thead>
+                <tr>
+                  <th>Comando</th>
+                  <th>Ação</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CREATE</td>
+                  <td>Criar objeto</td>
+                </tr>
+                <tr>
+                  <td>ALTER</td>
+                  <td>Alterar objeto</td>
+                </tr>
+                <tr>
+                  <td>DROP</td>
+                  <td>Eliminar o objeto por completo</td>
+                </tr>
+              </tbody>
+            </table>
+            <pre><code>CREATE DATABASE hotel_db;
+
+CREATE TABLE guests (
+    guest_id INT PRIMARY KEY,
+    full_name VARCHAR(100),
+    phone CHAR(12),
+    birth_date DATE
+);
+
+ALTER TABLE guests ADD email VARCHAR(100);
+
+DROP TABLE guests;</code></pre>
+            <aside class="callout callout--warning">
+              <h4>Não confundir</h4>
+              <p>O DROP elimina o objeto. O DELETE elimina linhas.</p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>O DDL cria, altera e elimina a estrutura da base de dados.</p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-dml"
+          data-topic="dml"
+          data-search="DML — работа с данными DML получает, добавляет, меняет и удаляет записи."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>DML — trabalho com dados</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            O DML obtém, adiciona, altera e elimina registos.
+          </p>
+          <div class="topic-card__content">
+            <table>
+              <caption>
+                Comandos DML
+              </caption>
+              <tbody>
+                <tr>
+                  <th>SELECT</th>
+                  <td>Obter dados</td>
+                </tr>
+                <tr>
+                  <th>INSERT</th>
+                  <td>Adicionar registo</td>
+                </tr>
+                <tr>
+                  <th>UPDATE</th>
+                  <td>Alterar registo</td>
+                </tr>
+                <tr>
+                  <th>DELETE</th>
+                  <td>Eliminar registo</td>
+                </tr>
+              </tbody>
+            </table>
+            <pre><code>INSERT INTO guests (guest_id, full_name)
+VALUES (1, 'Anna Silva');
+
+UPDATE guests
+SET full_name = 'Anna Costa'
+WHERE guest_id = 1;
+
+DELETE FROM guests
+WHERE guest_id = 1;
+
+SELECT * FROM guests;</code></pre>
+            <aside class="callout callout--error">
+              <h4>Erro típico</h4>
+              <p>
+                <code>DELETE * FROM XPTO</code> está errado. O correto é:
+                <code>DELETE FROM XPTO</code>.
+              </p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>O DML obtém, adiciona, altera e elimina registos.</p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-dcl"
+          data-topic="dcl"
+          data-search="DCL — управление разрешениями DCL определяет или изменяет права пользователей."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>DCL — gestão de permissões</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            O DCL define ou altera os direitos dos utilizadores.
+          </p>
+          <div class="topic-card__content">
+            <pre><code>GRANT SELECT ON products TO public;
+DENY DELETE ON products TO trainee;
+REVOKE SELECT ON products FROM trainee;</code></pre>
+            <dl>
+              <dt>GRANT</dt>
+              <dd>Conceder um direito.</dd>
+              <dt>DENY</dt>
+              <dd>Negar.</dd>
+              <dt>REVOKE</dt>
+              <dd>Revogar um direito.</dd>
+            </dl>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>O DCL define ou altera os direitos dos utilizadores.</p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-types"
+          data-topic="types"
+          data-search="Типы данных Тип данных определяет, какие значения можно хранить в столбце."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Tipos de dados</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            O tipo de dados define que valores podem ser guardados numa
+            coluna.
+          </p>
+          <div class="topic-card__content">
+            <table>
+              <caption>
+                Tipos principais
+              </caption>
+              <thead>
+                <tr>
+                  <th>Tipo</th>
+                  <th>Finalidade</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>INT</td>
+                  <td>Números inteiros</td>
+                </tr>
+                <tr>
+                  <td>VARCHAR(n)</td>
+                  <td>Texto de comprimento variável</td>
+                </tr>
+                <tr>
+                  <td>CHAR(n)</td>
+                  <td>Texto de comprimento fixo</td>
+                </tr>
+                <tr>
+                  <td>TEXT</td>
+                  <td>Texto longo</td>
+                </tr>
+                <tr>
+                  <td>DATE</td>
+                  <td>Data</td>
+                </tr>
+              </tbody>
+            </table>
+            <aside class="callout callout--exam">
+              <h4>No exame</h4>
+              <p>
+                Para nomes de países: <strong>VARCHAR(100)</strong>. O
+                comprimento varia, e 20 caracteres pode não ser suficiente.
+              </p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>
+              O tipo de dados define que valores podem ser guardados numa
+              coluna.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-keys"
+          data-topic="keys"
+          data-search="PRIMARY KEY и FOREIGN KEY PRIMARY KEY однозначно определяет строку. FOREIGN KEY ссылается на ключ другой таблицы."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>PRIMARY KEY e FOREIGN KEY</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            A PRIMARY KEY identifica de forma única a linha. A FOREIGN KEY faz
+            referência à chave de outra tabela.
+          </p>
+          <div class="topic-card__content">
+            <pre><code>CREATE TABLE customers (
+    customer_id INT PRIMARY KEY,
+    customer_name VARCHAR(100)
+);
+
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    FOREIGN KEY (customer_id)
+        REFERENCES customers(customer_id)
+);</code></pre>
+            <aside class="callout callout--memory">
+              <h4>Como memorizar</h4>
+              <p>
+                PRIMARY é o identificador principal. FOREIGN é a referência
+                para outra tabela.
+              </p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>
+              A PRIMARY KEY identifica de forma única a linha. A FOREIGN KEY
+              faz referência à chave de outra tabela.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-tsql"
+          data-topic="tsql"
+          data-search="Элементы Transact-SQL T-SQL включает пакеты, комментарии, переменные, функции, операторы и управление потоком."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Elementos do Transact-SQL</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            O T-SQL inclui batches, comentários, variáveis, funções,
+            operadores e controlo de fluxo.
+          </p>
+          <div class="topic-card__content">
+            <ul>
+              <li>
+                o GO separa batches, mas não é propriamente um comando T-SQL;
+              </li>
+              <li>o EXEC executa um procedimento ou um comando dinâmico;</li>
+              <li>comentários: <code>--</code> e <code>/* ... */</code>;</li>
+              <li>as variáveis começam com <code>@</code>;</li>
+              <li>BEGIN…END, IF…ELSE, WHILE e CASE controlam o fluxo.</li>
+            </ul>
+            <pre><code>DECLARE @price INT;
+SET @price = 100;
+
+IF @price &gt; 50
+BEGIN
+    SELECT 'Дорого' AS result;
+END
+ELSE
+BEGIN
+    SELECT 'Недорого' AS result;
+END
+GO</code></pre>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>
+              O T-SQL inclui batches, comentários, variáveis, funções,
+              operadores e controlo de fluxo.
+            </p>
+          </aside>
+        </article>
+      </section>
+      <section
+        id="queries"
+        class="course-section"
+        data-section="queries"
+        data-category="sql"
+        data-title="SELECT и фильтрация данных"
+        aria-labelledby="queries-title"
+      >
+        <header class="section-header">
+          <p>Secção 3</p>
+          <h2 id="queries-title">SELECT e filtragem de dados</h2>
+        </header>
+        <article
+          class="topic-card"
+          id="topic-select"
+          data-topic="select"
+          data-search="SELECT SELECT определяет столбцы, FROM — источник данных."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>SELECT</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            O SELECT define as colunas, o FROM é a origem dos dados.
+          </p>
+          <div class="topic-card__content">
+            <pre><code>SELECT employeeid, lastname, firstname, title
+FROM employees;
+
+SELECT *
+FROM employees;</code></pre>
+            <aside class="callout callout--exam">
+              <h4>Função do asterisco</h4>
+              <p>
+                No SELECT, <code>*</code> seleciona todas as colunas. No
+                COUNT(*), conta todas as linhas.
+              </p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>O SELECT define as colunas, o FROM é a origem dos dados.</p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-where"
+          data-topic="where"
+          data-search="WHERE и сравнения WHERE ограничивает строки условием."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>WHERE e comparações</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">O WHERE limita as linhas através de uma condição.</p>
+          <div class="topic-card__content">
+            <pre><code>SELECT employeeid, lastname
+FROM employees
+WHERE employeeid = 5;</code></pre>
+            <table>
+              <caption>
+                Operadores
+              </caption>
+              <tbody>
+                <tr>
+                  <th>=</th>
+                  <td>igual</td>
+                </tr>
+                <tr>
+                  <th>&lt;&gt;</th>
+                  <td>diferente</td>
+                </tr>
+                <tr>
+                  <th>&gt;</th>
+                  <td>maior</td>
+                </tr>
+                <tr>
+                  <th>&lt;</th>
+                  <td>menor</td>
+                </tr>
+                <tr>
+                  <th>&gt;=</th>
+                  <td>maior ou igual</td>
+                </tr>
+                <tr>
+                  <th>&lt;=</th>
+                  <td>menor ou igual</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>O WHERE limita as linhas através de uma condição.</p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-filters"
+          data-topic="filters"
+          data-search="LIKE, AND, OR, BETWEEN, IN, NULL Фильтры позволяют задавать точные и шаблонные условия."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>LIKE, AND, OR, BETWEEN, IN, NULL</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            Os filtros permitem definir condições exatas e por padrão.
+          </p>
+          <div class="topic-card__content">
+            <pre><code>SELECT companyname
+FROM customers
+WHERE companyname LIKE '%Restaurant%';
+
+SELECT productname, unitprice
+FROM products
+WHERE unitprice BETWEEN 10 AND 20;
+
+SELECT companyname, country
+FROM suppliers
+WHERE country IN ('Japan', 'Italy');
+
+SELECT companyname, fax
+FROM suppliers
+WHERE fax IS NULL;</code></pre>
+            <aside class="callout callout--error">
+              <h4>Erro típico</h4>
+              <p>Não escrevas <code>= NULL</code>. Escreve <code>IS NULL</code>.</p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>Os filtros permitem definir condições exatas e por padrão.</p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-format"
+          data-topic="format"
+          data-search="ORDER BY, DISTINCT и AS ORDER BY сортирует, DISTINCT убирает повторения, AS задаёт псевдоним."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>ORDER BY, DISTINCT e AS</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            O ORDER BY ordena, o DISTINCT remove repetições, o AS define um
+            alias.
+          </p>
+          <div class="topic-card__content">
+            <pre><code>SELECT productid, productname, categoryid, unitprice
+FROM products
+ORDER BY categoryid, unitprice DESC;
+
+SELECT DISTINCT country
+FROM customers;
+
+SELECT productname AS product,
+       unitprice AS price
+FROM products;</code></pre>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>
+              O ORDER BY ordena, o DISTINCT remove repetições, o AS define um
+              alias.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-top"
+          data-topic="top"
+          data-search="TOP n и WITH TIES В SQL Server TOP ограничивает число первых строк результата."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>TOP n e WITH TIES</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            No SQL Server, o TOP limita o número das primeiras linhas do
+            resultado.
+          </p>
+          <div class="topic-card__content">
+            <pre><code>SELECT TOP 5 orderid, productid, quantity
+FROM [order details]
+ORDER BY quantity DESC;
+
+SELECT TOP 5 WITH TIES orderid, productid, quantity
+FROM [order details]
+ORDER BY quantity DESC;</code></pre>
+            <p>
+              O WITH TIES acrescenta linhas com o mesmo valor de ordenação da
+              última linha selecionada.
+            </p>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>No SQL Server, o TOP limita o número das primeiras linhas do resultado.</p>
+          </aside>
+        </article>
+      </section>
+      <section
+        id="joins"
+        class="course-section"
+        data-section="joins"
+        data-category="sql"
+        data-title="Связи таблиц и JOIN"
+        aria-labelledby="joins-title"
+      >
+        <header class="section-header">
+          <p>Secção 4</p>
+          <h2 id="joins-title">Relações entre tabelas e JOIN</h2>
+        </header>
+        <article
+          class="topic-card"
+          id="topic-join"
+          data-topic="join"
+          data-search="JOIN и ON JOIN объединяет связанные строки из нескольких таблиц. ON задаёт условие связи."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>JOIN e ON</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            O JOIN combina linhas relacionadas de várias tabelas. O ON define
+            a condição de ligação.
+          </p>
+          <div class="topic-card__content">
+            <pre><code>SELECT b.buyer_name, s.buyer_id, s.qty
+FROM buyers AS b
+INNER JOIN sales AS s
+    ON b.buyer_id = s.buyer_id;</code></pre>
+            <aside class="callout callout--exam">
+              <h4>Como explicar ao professor</h4>
+              <p>
+                O JOIN liga tabelas, normalmente através da PRIMARY KEY e da
+                FOREIGN KEY. O ON indica as colunas comuns.
+              </p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>
+              O JOIN combina linhas relacionadas de várias tabelas. O ON
+              define a condição de ligação.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-join-types"
+          data-topic="join-types"
+          data-search="Типы JOIN Разные JOIN по-разному обрабатывают несовпавшие строки."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Tipos de JOIN</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            Os diferentes tipos de JOIN tratam de forma diferente as linhas
+            sem correspondência.
+          </p>
+          <div class="topic-card__content">
+            <table>
+              <caption>
+                Tipos de junção
+              </caption>
+              <tbody>
+                <tr>
+                  <th>INNER JOIN</th>
+                  <td>Apenas correspondências</td>
+                </tr>
+                <tr>
+                  <th>LEFT JOIN</th>
+                  <td>Todas as linhas da esquerda e correspondências da direita</td>
+                </tr>
+                <tr>
+                  <th>RIGHT JOIN</th>
+                  <td>Todas as linhas da direita e correspondências da esquerda</td>
+                </tr>
+                <tr>
+                  <th>FULL OUTER JOIN</th>
+                  <td>Todas as linhas de ambas as tabelas</td>
+                </tr>
+                <tr>
+                  <th>CROSS JOIN</th>
+                  <td>Todas as combinações possíveis</td>
+                </tr>
+                <tr>
+                  <th>SELF JOIN</th>
+                  <td>A tabela junta-se a si própria</td>
+                </tr>
+              </tbody>
+            </table>
+            <pre><code>SELECT c.customer_name, o.order_id
+FROM customers AS c
+LEFT JOIN orders AS o
+    ON c.customer_id = o.customer_id;</code></pre>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>Os diferentes tipos de JOIN tratam de forma diferente as linhas sem correspondência.</p>
+          </aside>
+        </article>
+      </section>
+      <section
+        id="aggregation"
+        class="course-section"
+        data-section="aggregation"
+        data-category="sql"
+        data-title="Агрегация данных"
+        aria-labelledby="aggregation-title"
+      >
+        <header class="section-header">
+          <p>Secção 5</p>
+          <h2 id="aggregation-title">Agregação de dados</h2>
+        </header>
+        <article
+          class="topic-card"
+          id="topic-aggregates"
+          data-topic="aggregates"
+          data-search="COUNT, SUM, AVG, MIN и MAX Агрегатные функции вычисляют одно итоговое значение по набору строк."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>COUNT, SUM, AVG, MIN e MAX</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            As funções agregadas calculam um único valor final a partir de um
+            conjunto de linhas.
+          </p>
+          <div class="topic-card__content">
+            <table>
+              <caption>
+                Funções agregadas
+              </caption>
+              <tbody>
+                <tr>
+                  <th>COUNT</th>
+                  <td>Número de valores</td>
+                </tr>
+                <tr>
+                  <th>COUNT(*)</th>
+                  <td>Número de linhas</td>
+                </tr>
+                <tr>
+                  <th>SUM</th>
+                  <td>Soma</td>
+                </tr>
+                <tr>
+                  <th>AVG</th>
+                  <td>Média</td>
+                </tr>
+                <tr>
+                  <th>MIN</th>
+                  <td>Mínimo</td>
+                </tr>
+                <tr>
+                  <th>MAX</th>
+                  <td>Máximo</td>
+                </tr>
+                <tr>
+                  <th>STDEV/STDEVP</th>
+                  <td>Desvio padrão</td>
+                </tr>
+                <tr>
+                  <th>VAR/VARP</th>
+                  <td>Variância</td>
+                </tr>
+              </tbody>
+            </table>
+            <pre><code>SELECT COUNT(*) AS employee_count,
+       AVG(unitprice) AS average_price,
+       MIN(unitprice) AS minimum_price,
+       MAX(unitprice) AS maximum_price,
+       SUM(unitprice) AS total_price
+FROM products;</code></pre>
+            <aside class="callout callout--important">
+              <h4>NULL</h4>
+              <p>
+                A maioria das funções agregadas ignora o NULL. O COUNT(*)
+                conta todas as linhas.
+              </p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>
+              As funções agregadas calculam um único valor final a partir de
+              um conjunto de linhas.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-group"
+          data-topic="group"
+          data-search="GROUP BY GROUP BY объединяет строки с одинаковым значением в группы."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>GROUP BY</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            O GROUP BY agrupa as linhas com o mesmo valor.
+          </p>
+          <div class="topic-card__content">
+            <pre><code>SELECT productid,
+       SUM(quantity) AS total_quantity
+FROM orderhist
+GROUP BY productid;</code></pre>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>O GROUP BY agrupa as linhas com o mesmo valor.</p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-having"
+          data-topic="having"
+          data-search="HAVING HAVING фильтрует сформированные группы."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>HAVING</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            O HAVING filtra os grupos já formados.
+          </p>
+          <div class="topic-card__content">
+            <pre><code>SELECT customer_id,
+       COUNT(*) AS order_count
+FROM orders
+GROUP BY customer_id
+HAVING COUNT(*) &gt; 5;</code></pre>
+            <aside class="callout callout--compare">
+              <h4>WHERE ou HAVING</h4>
+              <p>
+                O WHERE filtra as linhas antes do agrupamento. O HAVING
+                filtra os grupos depois do GROUP BY.
+              </p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>O HAVING filtra os grupos já formados.</p>
+          </aside>
+        </article>
+      </section>
+      <section
+        id="transactions"
+        class="course-section"
+        data-section="transactions"
+        data-category="sql"
+        data-title="Транзакции и серверная логика"
+        aria-labelledby="transactions-title"
+      >
+        <header class="section-header">
+          <p>Secção 6</p>
+          <h2 id="transactions-title">Transações e lógica do servidor</h2>
+        </header>
+        <article
+          class="topic-card"
+          id="topic-transaction"
+          data-topic="transaction"
+          data-search="COMMIT и ROLLBACK Транзакция объединяет действия: они применяются вместе или отменяются вместе."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>COMMIT e ROLLBACK</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            Uma transação agrupa ações: são aplicadas em conjunto ou anuladas
+            em conjunto.
+          </p>
+          <div class="topic-card__content">
+            <pre><code>BEGIN TRANSACTION;
+
+UPDATE savings
+SET balance = balance - 100
+WHERE custid = 78910;
+
+UPDATE checking
+SET balance = balance + 100
+WHERE custid = 78910;
+
+COMMIT TRANSACTION;</code></pre>
+            <dl>
+              <dt>COMMIT</dt>
+              <dd>Guardar as alterações.</dd>
+              <dt>ROLLBACK</dt>
+              <dd>Anular as alterações.</dd>
+            </dl>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>
+              Uma transação agrupa ações: são aplicadas em conjunto ou
+              anuladas em conjunto.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-trigger"
+          data-topic="trigger"
+          data-search="Trigger Trigger автоматически запускается при событии над таблицей."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Trigger</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            Um trigger é executado automaticamente perante um evento na
+            tabela.
+          </p>
+          <div class="topic-card__content">
+            <ul>
+              <li>INSERT</li>
+              <li>UPDATE</li>
+              <li>DELETE</li>
+            </ul>
+            <pre><code>CREATE TRIGGER trg_order_log
+ON orders
+AFTER INSERT
+AS
+BEGIN
+    INSERT INTO order_log (event_name)
+    VALUES ('INSERT');
+END;</code></pre>
+            <aside class="callout callout--exam">
+              <h4>No exame</h4>
+              <p>
+                O conjunto correto de eventos é: INSERT, UPDATE, DELETE. O
+                SELECT não altera a tabela.
+              </p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>Um trigger é executado automaticamente perante um evento na tabela.</p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-procedure"
+          data-topic="procedure"
+          data-search="Stored Procedure Stored Procedure — сохранённая на сервере последовательность SQL-команд."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Stored Procedure</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            A Stored Procedure é uma sequência de comandos SQL guardada no
+            servidor.
+          </p>
+          <div class="topic-card__content">
+            <pre><code>CREATE PROCEDURE GetCustomerOrders
+    @CustomerId INT
+AS
+BEGIN
+    SELECT *
+    FROM orders
+    WHERE customer_id = @CustomerId;
+END;
+
+EXEC GetCustomerOrders @CustomerId = 10;</code></pre>
+            <ul>
+              <li>execução repetida mais rápida;</li>
+              <li>lógica centralizada;</li>
+              <li>controlo de acesso;</li>
+              <li>menos repetição de código SQL.</li>
+            </ul>
+            <aside class="callout callout--exam">
+              <h4>No exame</h4>
+              <p>
+                De entre as opções, a vantagem da Stored Procedure é a
+                <strong>velocidade</strong>.
+              </p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>
+              A Stored Procedure é uma sequência de comandos SQL guardada no
+              servidor.
+            </p>
+          </aside>
+        </article>
+      </section>
+      <section
+        id="mysql"
+        class="course-section"
+        data-section="mysql"
+        data-category="mysql"
+        data-title="MySQL и InnoDB"
+        aria-labelledby="mysql-title"
+      >
+        <header class="section-header">
+          <p>Secção 7</p>
+          <h2 id="mysql-title">MySQL e InnoDB</h2>
+        </header>
+        <article
+          class="topic-card"
+          id="topic-mysql"
+          data-topic="mysql"
+          data-search="Что такое MySQL MySQL — реляционная СУБД с открытым исходным кодом, развиваемая в портфеле Oracle."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>O que é o MySQL</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            O MySQL é um SGBD relacional de código aberto, desenvolvido no
+            portefólio da Oracle.
+          </p>
+          <div class="topic-card__content">
+            <p>
+              A arquitetura do MySQL baseia-se em mecanismos de armazenamento
+              conetáveis. Isto permitiu desenvolver o InnoDB e o NDB.
+            </p>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>
+              O MySQL é um SGBD relacional de código aberto, desenvolvido no
+              portefólio da Oracle.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-install"
+          data-topic="install"
+          data-search="Установка MySQL в Windows и Linux В Windows используется официальный installer, в Linux — пакетный менеджер и служба."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Instalação do MySQL no Windows e no Linux</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            No Windows utiliza-se o installer oficial; no Linux, um gestor de
+            pacotes e um serviço.
+          </p>
+          <div class="topic-card__content">
+            <h4>Windows</h4>
+            <ol>
+              <li>Descarregar o MySQL Installer.</li>
+              <li>Instalar o MySQL Server e as ferramentas.</li>
+              <li>Configurar a porta 3306 e a palavra-passe de root.</li>
+              <li>Iniciar o serviço e verificar a ligação.</li>
+            </ol>
+            <h4>Linux</h4>
+            <pre><code>sudo apt update
+sudo apt install mysql-server
+sudo systemctl start mysql
+sudo systemctl enable mysql
+sudo mysql_secure_installation
+mysql -u root -p</code></pre>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>
+              No Windows utiliza-se o installer oficial; no Linux, um gestor
+              de pacotes e um serviço.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-innodb"
+          data-topic="innodb"
+          data-search="InnoDB InnoDB — транзакционный механизм хранения MySQL."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>InnoDB</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            O InnoDB é o motor de armazenamento transacional do MySQL.
+          </p>
+          <div class="topic-card__content">
+            <ul>
+              <li>transações;</li>
+              <li>COMMIT e ROLLBACK;</li>
+              <li>chaves estrangeiras;</li>
+              <li>bloqueios;</li>
+              <li>recuperação após falha.</li>
+            </ul>
+            <pre><code>CREATE TABLE payments (
+    payment_id INT PRIMARY KEY,
+    amount INT
+) ENGINE=InnoDB;</code></pre>
+            <aside class="callout callout--memory">
+              <h4>Para memorizar</h4>
+              <p>
+                O InnoDB é o motor. O InnoDB Cluster é a arquitetura de alta
+                disponibilidade.
+              </p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>O InnoDB é o motor de armazenamento transacional do MySQL.</p>
+          </aside>
+        </article>
+      </section>
+      <section
+        id="clusters"
+        class="course-section"
+        data-section="clusters"
+        data-category="cluster"
+        data-title="Репликация и кластеры MySQL"
+        aria-labelledby="clusters-title"
+      >
+        <header class="section-header">
+          <p>Secção 8</p>
+          <h2 id="clusters-title">Replicação e clusters MySQL</h2>
+        </header>
+        <article
+          class="topic-card"
+          id="topic-replication"
+          data-topic="replication"
+          data-search="Репликация Репликация создаёт и обновляет копии данных на нескольких серверах."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Replicação</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            A replicação cria e atualiza cópias dos dados em vários
+            servidores.
+          </p>
+          <div class="topic-card__content">
+            <table>
+              <caption>
+                Modos de replicação
+              </caption>
+              <tbody>
+                <tr>
+                  <th>Assíncrono</th>
+                  <td>
+                    Rápido, mas pode haver perda das últimas alterações se o
+                    master falhar.
+                  </td>
+                </tr>
+                <tr>
+                  <th>Semissíncrono</th>
+                  <td>
+                    O master espera a confirmação de receção da alteração
+                    pela réplica.
+                  </td>
+                </tr>
+                <tr>
+                  <th>Virtualmente síncrono</th>
+                  <td>Group Replication no InnoDB Cluster.</td>
+                </tr>
+                <tr>
+                  <th>Síncrono</th>
+                  <td>O NDB Cluster confirma a aplicação nos nós.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>
+              A replicação cria e atualiza cópias dos dados em vários
+              servidores.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-innodb-cluster"
+          data-topic="innodb-cluster"
+          data-search="InnoDB Cluster InnoDB Cluster объединяет Group Replication, MySQL Router и MySQL Shell."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>InnoDB Cluster</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            O InnoDB Cluster combina o Group Replication, o MySQL Router e o
+            MySQL Shell.
+          </p>
+          <div class="topic-card__content">
+            <dl>
+              <dt>Group Replication</dt>
+              <dd>Coordena os nós e elege o PRIMARY.</dd>
+              <dt>MySQL Router</dt>
+              <dd>Encaminha as ligações.</dd>
+              <dt>MySQL Shell</dt>
+              <dd>Configura e gere o cluster.</dd>
+            </dl>
+            <h4>Requisitos</h4>
+            <ul>
+              <li>InnoDB;</li>
+              <li>PRIMARY KEY explícita em cada tabela replicada;</li>
+              <li>IPv4;</li>
+              <li>rede rápida;</li>
+              <li>quórum.</li>
+            </ul>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>
+              O InnoDB Cluster combina o Group Replication, o MySQL Router e
+              o MySQL Shell.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-cluster-install"
+          data-topic="cluster-install"
+          data-search="Схема создания InnoDB Cluster Обычно готовят три сервера, конфигурируют инстанции и подключают Router."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Esquema de criação de um InnoDB Cluster</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            Normalmente preparam-se três servidores, configuram-se as
+            instâncias e liga-se o Router.
+          </p>
+          <div class="topic-card__content">
+            <ol>
+              <li>Três máquinas com hostnames diferentes.</li>
+              <li>MySQL Server e MySQL Shell.</li>
+              <li>Utilizador administrativo.</li>
+              <li>dba.configureInstance para cada nó.</li>
+              <li>dba.createCluster.</li>
+              <li>cluster.addInstance.</li>
+              <li>MySQL Router.</li>
+              <li>Verificação do failover.</li>
+            </ol>
+            <pre><code>sudo apt install mysql-server mysql-shell -y
+
+mysqlsh
+\connect admin@innodb1
+dba.configureInstance('admin@innodb1');
+var cluster = dba.createCluster('studyCluster');
+cluster.addInstance('admin@innodb2');
+cluster.addInstance('admin@innodb3');
+cluster.status();</code></pre>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>
+              Normalmente preparam-se três servidores, configuram-se as
+              instâncias e liga-se o Router.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-ndb"
+          data-topic="ndb"
+          data-search="MySQL Cluster / NDB Cluster MySQL NDB Cluster — распределённая shared-nothing база для высокой доступности и OLTP."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>MySQL Cluster / NDB Cluster</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            O MySQL NDB Cluster é uma base de dados distribuída shared-nothing
+            para alta disponibilidade e OLTP.
+          </p>
+          <div class="topic-card__content">
+            <h4>Componentes</h4>
+            <ul>
+              <li>Management Node — configuração e gestão;</li>
+              <li>Data/Storage Node — armazenamento de dados;</li>
+              <li>SQL/API Node — SQL e aplicações;</li>
+              <li>Node Group — réplicas dos fragmentos.</li>
+            </ul>
+            <h4>Vantagens</h4>
+            <ul>
+              <li>replicação síncrona;</li>
+              <li>sharding automático;</li>
+              <li>escalabilidade de leitura e escrita;</li>
+              <li>replicação geográfica;</li>
+              <li>alta disponibilidade.</li>
+            </ul>
+            <h4>Desvantagens</h4>
+            <ul>
+              <li>operação complexa;</li>
+              <li>não é a melhor opção para OLAP pesado.</li>
+            </ul>
+            <pre><code>[ndbd default]
+DataDir=/var/lib/mysql-cluster
+NoOfReplicas=2
+
+[ndbd]
+NodeId=2
+Hostname=192.168.0.102
+
+[ndbd]
+NodeId=3
+Hostname=192.168.0.103</code></pre>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>
+              O MySQL NDB Cluster é uma base de dados distribuída
+              shared-nothing para alta disponibilidade e OLTP.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-cluster-answer"
+          data-topic="cluster-answer"
+          data-search="Готовый ответ о кластере Да, MySQL поддерживает несколько кластерных решений."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Resposta pronta sobre clusters</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            Sim, o MySQL suporta várias soluções de cluster.
+          </p>
+          <div class="topic-card__content">
+            <blockquote>
+              É possível criar um InnoDB Cluster com base no Group
+              Replication, no MySQL Router e no MySQL Shell. Também existe o
+              MySQL NDB Cluster, com management nodes, data nodes e SQL/API
+              nodes.
+            </blockquote>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>Sim, o MySQL suporta várias soluções de cluster.</p>
+          </aside>
+        </article>
+      </section>
+      <section
+        id="nosql"
+        class="course-section"
+        data-section="nosql"
+        data-category="nosql"
+        data-title="NoSQL, MongoDB и Neo4j"
+        aria-labelledby="nosql-title"
+      >
+        <header class="section-header">
+          <p>Secção 9</p>
+          <h2 id="nosql-title">NoSQL, MongoDB e Neo4j</h2>
+        </header>
+        <article
+          class="topic-card"
+          id="topic-nosql"
+          data-topic="nosql"
+          data-search="Что такое NoSQL NoSQL — группа нереляционных подходов для задач, где табличная модель неудобна."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>O que é o NoSQL</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            O NoSQL é um grupo de abordagens não relacionais para casos em
+            que o modelo tabular não é conveniente.
+          </p>
+          <div class="topic-card__content">
+            <ul>
+              <li>elevado desempenho;</li>
+              <li>escalabilidade horizontal;</li>
+              <li>resiliência a falhas;</li>
+              <li>esquema flexível;</li>
+              <li>frequentemente open source.</li>
+            </ul>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>
+              O NoSQL é um grupo de abordagens não relacionais para casos em
+              que o modelo tabular não é conveniente.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-nosql-types"
+          data-topic="nosql-types"
+          data-search="Типы NoSQL Основные модели: column, document, key-value, graph и multi-model."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Tipos de NoSQL</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            Os principais modelos são: column, document, key-value, graph e
+            multi-model.
+          </p>
+          <div class="topic-card__content">
+            <table>
+              <caption>
+                Modelos NoSQL
+              </caption>
+              <tbody>
+                <tr>
+                  <th>Column</th>
+                  <td>Cassandra, HBase, BigTable</td>
+                </tr>
+                <tr>
+                  <th>Document</th>
+                  <td>MongoDB, CouchDB, Couchbase</td>
+                </tr>
+                <tr>
+                  <th>Key-value</th>
+                  <td>Redis, Riak, Dynamo</td>
+                </tr>
+                <tr>
+                  <th>Graph</th>
+                  <td>Neo4j, InfiniteGraph</td>
+                </tr>
+                <tr>
+                  <th>Multi-model</th>
+                  <td>OrientDB, ArangoDB</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>
+              Os principais modelos são: column, document, key-value, graph
+              e multi-model.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-mongodb"
+          data-topic="mongodb"
+          data-search="MongoDB MongoDB — документная NoSQL-СУБД, хранящая BSON-документы в коллекциях."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>MongoDB</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            O MongoDB é um SGBD NoSQL documental, que guarda documentos BSON
+            em coleções.
+          </p>
+          <div class="topic-card__content">
+            <dl>
+              <dt>Document</dt>
+              <dd>Um objeto, semelhante a JSON.</dd>
+              <dt>Collection</dt>
+              <dd>Um conjunto de documentos.</dd>
+              <dt>Field</dt>
+              <dd>Um campo do documento.</dd>
+              <dt>_id</dt>
+              <dd>Identificador único.</dd>
+            </dl>
+            <pre><code>{
+  "_id": 1,
+  "name": "Hotel Princesa",
+  "city": "Vila do Conde",
+  "rooms": 10,
+  "features": ["terrace", "kitchen", "wifi"]
+}</code></pre>
+            <h4>Quando aplicar</h4>
+            <ul>
+              <li>estrutura flexível;</li>
+              <li>objetos e arrays aninhados;</li>
+              <li>esquema que muda frequentemente;</li>
+              <li>é conveniente guardar o objeto num único documento.</li>
+            </ul>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>
+              O MongoDB é um SGBD NoSQL documental, que guarda documentos
+              BSON em coleções.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-mongo-commands"
+          data-topic="mongo-commands"
+          data-search="Команды MongoDB MongoDB имеет команды для баз, коллекций и CRUD документов."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Comandos do MongoDB</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            O MongoDB tem comandos para bases de dados, coleções e CRUD de
+            documentos.
+          </p>
+          <div class="topic-card__content">
+            <pre><code>db
+show collections
+use hotel_db
+
+db.guests.insertOne({ name: "Anna", country: "Portugal" })
+db.guests.find()
+db.guests.findOne({ name: "Anna" })
+db.guests.updateOne(
+  { name: "Anna" },
+  { $set: { country: "Spain" } }
+)
+db.guests.deleteOne({ name: "Anna" })
+db.guests.drop()
+db.dropDatabase()</code></pre>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>O MongoDB tem comandos para bases de dados, coleções e CRUD de documentos.</p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-mongo-os"
+          data-topic="mongo-os"
+          data-search="MongoDB в Windows и Linux MongoDB может работать и в Windows, и в Linux."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>MongoDB no Windows e no Linux</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            O MongoDB pode funcionar tanto no Windows como no Linux.
+          </p>
+          <div class="topic-card__content">
+            <aside class="callout callout--exam">
+              <h4>No exame</h4>
+              <p>
+                Para ambos os sistemas operativos existem builds de servidor e
+                ferramentas cliente do MongoDB.
+              </p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>O MongoDB pode funcionar tanto no Windows como no Linux.</p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-neo4j"
+          data-topic="neo4j"
+          data-search="Neo4j Neo4j — графовая база данных для данных, где важны связи."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Neo4j</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            O Neo4j é uma base de dados de grafos para dados em que as
+            relações são importantes.
+          </p>
+          <div class="topic-card__content">
+            <dl>
+              <dt>Node</dt>
+              <dd>Nó, objeto.</dd>
+              <dt>Relationship</dt>
+              <dd>Relação direcionada.</dd>
+              <dt>Property</dt>
+              <dd>Propriedade de um nó ou de uma relação.</dd>
+              <dt>Label</dt>
+              <dd>Categoria do nó.</dd>
+            </dl>
+            <pre><code>(Guest {name: "Anna"})
+    -[:BOOKED]-&gt;
+(Room {number: 204})</code></pre>
+            <h4>Aplicações</h4>
+            <ul>
+              <li>redes sociais;</li>
+              <li>recomendações;</li>
+              <li>rotas;</li>
+              <li>deteção de fraude;</li>
+              <li>redes de dependências;</li>
+              <li>knowledge graph.</li>
+            </ul>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>O Neo4j é uma base de dados de grafos para dados em que as relações são importantes.</p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-table-graph"
+          data-topic="table-graph"
+          data-search="Таблица и граф Таблица хранит строки и столбцы. Граф хранит узлы и явные связи."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Tabela e grafo</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Marcar o tema como estudado"
+              data-action="complete-topic"
+            >
+              Marcar como estudado
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            A tabela guarda linhas e colunas. O grafo guarda nós e relações
+            explícitas.
+          </p>
+          <div class="topic-card__content">
+            <table>
+              <caption>
+                Comparação
+              </caption>
+              <tbody>
+                <tr>
+                  <th>Tabela</th>
+                  <th>Grafo</th>
+                </tr>
+                <tr>
+                  <td>Linhas e colunas</td>
+                  <td>Nós, relações e propriedades</td>
+                </tr>
+                <tr>
+                  <td>Relações através de chaves e JOIN</td>
+                  <td>As relações são guardadas diretamente</td>
+                </tr>
+                <tr>
+                  <td>Registos estruturados</td>
+                  <td>Redes complexas de relações</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <details class="exam-prompt">
+            <summary>Como o professor pode perguntar</summary>
+            <p>
+              Dá a definição, explica a finalidade, indica os elementos
+              principais e apresenta um exemplo breve.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Se te esqueceste da definição</h4>
+            <p>
+              A tabela guarda linhas e colunas. O grafo guarda nós e relações
+              explícitas.
+            </p>
+          </aside>
+        </article>
+      </section>
+      <section
+        id="exam"
+        class="course-section"
+        data-section="exam"
+        data-category="exam"
+        aria-labelledby="exam-title"
+      >
+        <header class="section-header">
+          <p>Secção final</p>
+          <h2 id="exam-title">Verificação de exame</h2>
+          <p>Responde primeiro e só depois revela a resposta.</p>
+        </header>
+        <form class="mini-test" data-quiz="database-final">
+          <fieldset>
+            <legend>Perguntas de escolha múltipla</legend>
+            <article data-question="1">
+              <h3>1. Que eventos acionam um trigger de tabela?</h3>
+              <label
+                ><input type="radio" name="q1" value="a" /> INSERT, UPDATE,
+                DELETE</label
+              ><label
+                ><input type="radio" name="q1" value="b" /> SELECT, INSERT,
+                UPDATE, DELETE</label
+              ><label
+                ><input type="radio" name="q1" value="c" /> INSERT,
+                UPDATE</label
+              >
+              <details data-answer="a">
+                <summary>Resposta</summary>
+                <p>INSERT, UPDATE, DELETE.</p>
+              </details>
+            </article>
+            <article data-question="2">
+              <h3>2. Para que foram criados os SGBD?</h3>
+              <label
+                ><input type="radio" name="q2" value="a" /> Para organizar e
+                gerir bases de dados</label
+              ><label
+                ><input type="radio" name="q2" value="b" /> Apenas para
+                procedimentos</label
+              ><label
+                ><input type="radio" name="q2" value="c" /> Apenas para
+                Jobs</label
+              >
+              <details data-answer="a">
+                <summary>Resposta</summary>
+                <p>
+                  Para organizar e gerir uma ou várias bases de dados.
+                </p>
+              </details>
+            </article>
+            <article data-question="3">
+              <h3>3. Tipo para nomes de países</h3>
+              <label
+                ><input type="radio" name="q3" value="a" /> VARCHAR(20)</label
+              ><label
+                ><input type="radio" name="q3" value="b" /> VARCHAR(100)</label
+              ><label><input type="radio" name="q3" value="c" /> TEXT</label>
+              <details data-answer="b">
+                <summary>Resposta</summary>
+                <p>VARCHAR(100).</p>
+              </details>
+            </article>
+            <article data-question="4">
+              <h3>4. Erro em DELETE * FROM XPTO</h3>
+              <label><input type="radio" name="q4" value="a" /> Falta o WHERE</label
+              ><label
+                ><input type="radio" name="q4" value="b" /> Não se pode
+                indicar *</label
+              ><label
+                ><input type="radio" name="q4" value="c" /> É preciso um
+                DROP</label
+              >
+              <details data-answer="b">
+                <summary>Resposta</summary>
+                <p>No DELETE não se pode indicar colunas nem o asterisco.</p>
+              </details>
+            </article>
+            <article data-question="5">
+              <h3>5. Vantagem da Stored Procedure</h3>
+              <label><input type="radio" name="q5" value="a" /> Velocidade</label
+              ><label
+                ><input type="radio" name="q5" value="b" /> Não é preciso
+                saber SQL</label
+              ><label
+                ><input type="radio" name="q5" value="c" /> Arranque
+                automático ao iniciar o SGBD</label
+              >
+              <details data-answer="a">
+                <summary>Resposta</summary>
+                <p>Velocidade.</p>
+              </details>
+            </article>
+            <button type="submit" data-action="grade-quiz">Verificar</button
+            ><button type="reset">Repor</button
+            ><output aria-live="polite" data-quiz-output
+              >A verificação vai funcionar depois de ativar o JavaScript.</output
+            >
+          </fieldset>
+        </form>
+        <section class="open-questions" aria-labelledby="open-title">
+          <h3 id="open-title">Perguntas abertas</h3>
+          <details data-question="6">
+            <summary>6. Como instalar o MySQL no Linux e no Windows?</summary>
+            <p>
+              Windows: Installer oficial, servidor, porta, palavra-passe de
+              root, arranque do serviço. Linux: gestor de pacotes, arranque
+              do serviço, configuração segura e verificação do acesso.
+            </p>
+          </details>
+          <details data-question="7">
+            <summary>7. É possível criar um cluster MySQL?</summary>
+            <p>Sim: InnoDB Cluster ou MySQL NDB Cluster.</p>
+          </details>
+          <details data-question="8">
+            <summary>8. Criar uma BD, eliminar um registo, eliminar a BD</summary>
+            <pre><code>CREATE DATABASE database_name;
+DELETE FROM table_name WHERE id = 1;
+DROP DATABASE database_name;</code></pre>
+          </details>
+          <details data-question="9">
+            <summary>9. O que faz o * em SQL?</summary>
+            <p>No SELECT seleciona todas as colunas; no COUNT(*) conta todas as linhas.</p>
+          </details>
+          <details data-question="10">
+            <summary>10. O que é o MongoDB e onde funciona?</summary>
+            <p>SGBD NoSQL documental, que funciona no Windows e no Linux.</p>
+          </details>
+          <details data-question="11">
+            <summary>11. Quando aplicar o MongoDB?</summary>
+            <p>
+              Para documentos flexíveis, estruturas aninhadas, arrays e
+              esquemas variáveis.
+            </p>
+          </details>
+          <details data-question="12">
+            <summary>12. MongoDB no Linux e no Windows?</summary>
+            <p>Sim, existem versões para ambas as plataformas.</p>
+          </details>
+          <details data-question="13">
+            <summary>13. Quando aplicar o Neo4j?</summary>
+            <p>
+              Quando as relações complexas são importantes: redes sociais,
+              rotas, recomendações, fraude.
+            </p>
+          </details>
+          <details data-question="14">
+            <summary>14. Características do Neo4j</summary>
+            <p>Nós, relações direcionadas, propriedades e etiquetas.</p>
+          </details>
+          <details data-question="15">
+            <summary>15. Tabela e grafo</summary>
+            <p>
+              A tabela guarda linhas e colunas; o grafo guarda nós e relações
+              diretas.
+            </p>
+          </details>
+        </section>
+      </section>
+      <section
+        id="final-check"
+        data-section="final-check"
+        aria-labelledby="final-title"
+      >
+        <h2 id="final-title">Verificação final</h2>
+        <form data-checklist="final">
+          <fieldset>
+            <legend>Consigo explicar</legend>
+            <label
+              ><input type="checkbox" data-complete="ddl" />DDL, DML, DCL</label
+            >
+            <label
+              ><input type="checkbox" data-complete="delete-drop" />DELETE e
+              DROP</label
+            >
+            <label
+              ><input type="checkbox" data-complete="select" />SELECT e
+              WHERE</label
+            >
+            <label><input type="checkbox" data-complete="joins" />JOIN</label>
+            <label
+              ><input type="checkbox" data-complete="aggregation" />GROUP BY e
+              HAVING</label
+            >
+            <label
+              ><input type="checkbox" data-complete="transactions" />COMMIT e
+              ROLLBACK</label
+            >
+            <label
+              ><input type="checkbox" data-complete="trigger" />Trigger</label
+            >
+            <label
+              ><input type="checkbox" data-complete="procedure" />Stored
+              Procedure</label
+            >
+            <label
+              ><input type="checkbox" data-complete="clusters" />Clusters
+              MySQL</label
+            >
+            <label
+              ><input type="checkbox" data-complete="mongodb" />MongoDB</label
+            >
+            <label><input type="checkbox" data-complete="neo4j" />Neo4j</label>
+          </fieldset>
+        </form>
+      </section>
+      <section id="faq" data-section="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">FAQ</h2>
+        <details>
+          <summary>Porque é que DELETE * está errado?</summary>
+          <p>O DELETE elimina linhas, por isso não se indica uma lista de colunas.</p>
+        </details>
+        <details>
+          <summary>Porque é que o WHERE e o HAVING são diferentes?</summary>
+          <p>O WHERE filtra linhas, o HAVING filtra grupos.</p>
+        </details>
+        <details>
+          <summary>O MongoDB substitui o SQL?</summary>
+          <p>Não. É um modelo diferente para problemas diferentes.</p>
+        </details>
+      </section>
+    </main>
+    <aside class="floating-study-panel" aria-label="Navegação rápida">
+      <button
+        type="button"
+        aria-expanded="false"
+        aria-controls="floating-content"
+        data-action="toggle-study-panel"
+      >
+        Painel de estudo
+      </button>
+      <div id="floating-content" hidden>
+        <a href="#top">Topo</a><a href="#exam">Exame</a
+        ><output aria-live="polite">Progresso: 0%</output>
+      </div>
+    </aside>
+    <footer class="site-footer" role="contentinfo">
+      <p>Site de estudo de bases de dados para preparação para o exame do ISTEC.</p>
+      <nav aria-label="Navegação do rodapé">
+        <a href="#top">Topo</a><a href="#study-map">Plano</a
+        ><a href="#exam">Exame</a>
+      </nav>
+    </footer>
+    <div
+      id="notification-region"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+      data-notification-region
+    ></div>
+    <template id="search-result-template"
+      ><article data-search-result>
+        <h3 data-result-title></h3>
+        <p data-result-description></p>
+        <a href="#" data-result-link>Abrir tema</a>
+      </article></template
+    >
+    <template id="quiz-feedback-template"
+      ><div role="status"><p data-feedback-text></p></div
+    ></template>
+    <template id="progress-item-template"
+      ><li>
+        <span data-progress-title></span><span data-progress-status></span></li
+    ></template>
+    <noscript
+      ><p>
+        O conteúdo está disponível, mas a pesquisa, o teste e o progresso
+        requerem JavaScript.
+      </p></noscript
+    >
+  </body>
+</html>

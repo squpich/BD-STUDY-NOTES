@@ -1,0 +1,2679 @@
+<!doctype html>
+<html lang="ru" data-app="database-exam-study" data-version="1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Учебный сайт по базам данных для экзамена ISTEC"
+    />
+    <title>Базы данных — подготовка к экзамену ISTEC</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+</head>
+  <body id="top" data-page="home" data-progress="0">
+    <a href="#main-content" class="skip-link">Перейти к содержимому</a>
+    <header class="site-header" role="banner" data-section="header">
+      <a class="brand" href="#top" aria-label="Главная"
+        ><strong>Базы данных</strong><span>ISTEC Exam Study</span></a
+      >
+      <button
+        type="button"
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        data-action="toggle-menu"
+      >
+        Меню
+      </button>
+      <nav id="primary-navigation" aria-label="Основная навигация">
+        <ul>
+          <li><a href="#study-map">План</a></li>
+          <li><a href="#sql-foundations">SQL</a></li>
+          <li><a href="#mysql">MySQL</a></li>
+          <li><a href="#clusters">Кластеры</a></li>
+          <li><a href="#nosql">NoSQL</a></li>
+          <li><a href="#exam">Экзамен</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main-content" tabindex="-1">
+      <section class="hero" data-section="hero" aria-labelledby="hero-title">
+        <p>Система управления базами данных</p>
+        <h1 id="hero-title">Полный курс по базам данных за один день</h1>
+        <p>
+          SQL, Transact-SQL, MySQL, InnoDB, репликация, кластеры, MongoDB, NoSQL
+          и Neo4j простым русским языком.
+        </p>
+        <a href="#study-map">Начать обучение</a>
+        <a href="#exam">Перейти к экзамену</a>
+      </section>
+      <section
+        class="study-tools"
+        aria-labelledby="tools-title"
+        data-section="tools"
+      >
+        <h2 id="tools-title">Инструменты обучения</h2>
+        <form role="search" data-search-form>
+          <label for="site-search">Поиск по теме</label
+          ><input
+            id="site-search"
+            type="search"
+            placeholder="GROUP BY, MongoDB, trigger"
+            data-search-input
+          /><button type="submit">Найти</button
+          ><button type="reset">Очистить</button
+          ><output aria-live="polite" data-search-output
+            >Все темы показаны.</output
+          >
+        </form>
+        <div class="progress-panel">
+          <h3>Прогресс</h3>
+          <progress max="100" value="0" data-progress="course">0%</progress
+          ><output aria-live="polite">0%</output>
+        </div>
+        <form data-filter-form>
+          <fieldset>
+            <legend>Фильтр</legend>
+            <label><input type="checkbox" data-filter="sql" />SQL</label
+            ><label><input type="checkbox" data-filter="mysql" />MySQL</label
+            ><label
+              ><input type="checkbox" data-filter="cluster" />Кластеры</label
+            ><label><input type="checkbox" data-filter="nosql" />NoSQL</label>
+          </fieldset>
+        </form>
+      </section>
+      <section
+        id="study-map"
+        class="study-map"
+        data-section="study-map"
+        aria-labelledby="study-map-title"
+      >
+        <h2 id="study-map-title">План обучения</h2>
+        <ol>
+          <li>
+            <a href="#dbms" data-title="База данных и СУБД"
+              >База данных и СУБД</a
+            >
+          </li>
+          <li>
+            <a href="#sql-foundations" data-title="SQL и Transact-SQL"
+              >SQL и Transact-SQL</a
+            >
+          </li>
+          <li>
+            <a href="#queries" data-title="SELECT и фильтрация данных"
+              >SELECT и фильтрация данных</a
+            >
+          </li>
+          <li>
+            <a href="#joins" data-title="Связи таблиц и JOIN"
+              >Связи таблиц и JOIN</a
+            >
+          </li>
+          <li>
+            <a href="#aggregation" data-title="Агрегация данных"
+              >Агрегация данных</a
+            >
+          </li>
+          <li>
+            <a href="#transactions" data-title="Транзакции и серверная логика"
+              >Транзакции и серверная логика</a
+            >
+          </li>
+          <li>
+            <a href="#mysql" data-title="MySQL и InnoDB">MySQL и InnoDB</a>
+          </li>
+          <li>
+            <a href="#clusters" data-title="Репликация и кластеры MySQL"
+              >Репликация и кластеры MySQL</a
+            >
+          </li>
+          <li>
+            <a href="#nosql" data-title="NoSQL, MongoDB и Neo4j"
+              >NoSQL, MongoDB и Neo4j</a
+            >
+          </li>
+          <li><a href="#exam">Экзаменационная проверка</a></li>
+        </ol>
+      </section>
+      <section
+        id="dbms"
+        class="course-section"
+        data-section="dbms"
+        data-category="fundamentals"
+        data-title="База данных и СУБД"
+        aria-labelledby="dbms-title"
+      >
+        <header class="section-header">
+          <p>Раздел 1</p>
+          <h2 id="dbms-title">База данных и СУБД</h2>
+        </header>
+        <article
+          class="topic-card"
+          id="topic-database"
+          data-topic="database"
+          data-search="Что такое база данных База данных — организованный набор связанных данных, который можно хранить, искать, изменять и удалять."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Что такое база данных</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            База данных — организованный набор связанных данных, который можно
+            хранить, искать, изменять и удалять.
+          </p>
+          <div class="topic-card__content">
+            <p>
+              В реляционной базе данные обычно представлены таблицами. Таблица
+              состоит из столбцов и строк. Столбец описывает характеристику, а
+              строка — один объект.
+            </p>
+            <aside class="callout callout--memory" aria-label="Запомни">
+              <h4>Запомни</h4>
+              <p>Столбец = характеристика. Строка = конкретная запись.</p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>
+              База данных — организованный набор связанных данных, который можно
+              хранить, искать, изменять и удалять.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-dbms"
+          data-topic="dbms"
+          data-search="Что такое СУБД СУБД — система управления базами данных. Она организует и управляет одной или несколькими базами данных."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Что такое СУБД</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            СУБД — система управления базами данных. Она организует и управляет
+            одной или несколькими базами данных.
+          </p>
+          <div class="topic-card__content">
+            <h4>Зачем это нужно</h4>
+            <ul>
+              <li>создавать базы и таблицы;</li>
+              <li>сохранять и изменять данные;</li>
+              <li>искать информацию;</li>
+              <li>управлять доступом;</li>
+              <li>поддерживать целостность и транзакции;</li>
+              <li>обеспечивать резервирование и доступность.</li>
+            </ul>
+            <aside class="callout callout--exam">
+              <h4>На экзамене</h4>
+              <p>
+                <strong>Ответ:</strong> СУБД созданы для организации и
+                управления одной или несколькими базами данных.
+              </p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>
+              СУБД — система управления базами данных. Она организует и
+              управляет одной или несколькими базами данных.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-relational"
+          data-topic="relational"
+          data-search="Реляционная модель, OLTP и OLAP Реляционная база хранит данные в таблицах, а связи строятся с помощью ключей."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Реляционная модель, OLTP и OLAP</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            Реляционная база хранит данные в таблицах, а связи строятся с
+            помощью ключей.
+          </p>
+          <div class="topic-card__content">
+            <dl>
+              <dt>OLTP</dt>
+              <dd>
+                Много коротких ежедневных операций: покупка, бронирование,
+                перевод.
+              </dd>
+              <dt>OLAP</dt>
+              <dd>
+                Аналитические запросы, отчёты и статистика по большим объёмам
+                данных.
+              </dd>
+            </dl>
+            <aside class="callout callout--compare">
+              <h4>Чем отличается</h4>
+              <p>
+                OLTP обрабатывает транзакции. OLAP анализирует накопленные
+                данные.
+              </p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>
+              Реляционная база хранит данные в таблицах, а связи строятся с
+              помощью ключей.
+            </p>
+          </aside>
+        </article>
+      </section>
+      <section
+        id="sql-foundations"
+        class="course-section"
+        data-section="sql-foundations"
+        data-category="sql"
+        data-title="SQL и Transact-SQL"
+        aria-labelledby="sql-foundations-title"
+      >
+        <header class="section-header">
+          <p>Раздел 2</p>
+          <h2 id="sql-foundations-title">SQL и Transact-SQL</h2>
+        </header>
+        <article
+          class="topic-card"
+          id="topic-sql"
+          data-topic="sql"
+          data-search="Что такое SQL SQL — язык определения структуры базы, управления данными и получения информации."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Что такое SQL</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            SQL — язык определения структуры базы, управления данными и
+            получения информации.
+          </p>
+          <div class="topic-card__content">
+            <p>
+              Transact-SQL, или T-SQL, — реализация SQL в Microsoft SQL Server.
+              Она основана на SQL-92 и добавляет переменные, условия, циклы,
+              функции и процедуры.
+            </p>
+            <aside class="callout callout--short">
+              <h4>Очень коротко</h4>
+              <p>SQL — общий язык. T-SQL — вариант SQL для SQL Server.</p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>
+              SQL — язык определения структуры базы, управления данными и
+              получения информации.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-ddl"
+          data-topic="ddl"
+          data-search="DDL — определение объектов DDL создаёт, изменяет и удаляет структуру базы данных."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>DDL — определение объектов</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            DDL создаёт, изменяет и удаляет структуру базы данных.
+          </p>
+          <div class="topic-card__content">
+            <table>
+              <caption>
+                Команды DDL
+              </caption>
+              <thead>
+                <tr>
+                  <th>Команда</th>
+                  <th>Действие</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CREATE</td>
+                  <td>Создать объект</td>
+                </tr>
+                <tr>
+                  <td>ALTER</td>
+                  <td>Изменить объект</td>
+                </tr>
+                <tr>
+                  <td>DROP</td>
+                  <td>Удалить объект целиком</td>
+                </tr>
+              </tbody>
+            </table>
+            <pre><code>CREATE DATABASE hotel_db;
+
+CREATE TABLE guests (
+    guest_id INT PRIMARY KEY,
+    full_name VARCHAR(100),
+    phone CHAR(12),
+    birth_date DATE
+);
+
+ALTER TABLE guests ADD email VARCHAR(100);
+
+DROP TABLE guests;</code></pre>
+            <aside class="callout callout--warning">
+              <h4>Не перепутай</h4>
+              <p>DROP удаляет объект. DELETE удаляет строки.</p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>DDL создаёт, изменяет и удаляет структуру базы данных.</p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-dml"
+          data-topic="dml"
+          data-search="DML — работа с данными DML получает, добавляет, меняет и удаляет записи."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>DML — работа с данными</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            DML получает, добавляет, меняет и удаляет записи.
+          </p>
+          <div class="topic-card__content">
+            <table>
+              <caption>
+                Команды DML
+              </caption>
+              <tbody>
+                <tr>
+                  <th>SELECT</th>
+                  <td>Получить данные</td>
+                </tr>
+                <tr>
+                  <th>INSERT</th>
+                  <td>Добавить запись</td>
+                </tr>
+                <tr>
+                  <th>UPDATE</th>
+                  <td>Изменить запись</td>
+                </tr>
+                <tr>
+                  <th>DELETE</th>
+                  <td>Удалить запись</td>
+                </tr>
+              </tbody>
+            </table>
+            <pre><code>INSERT INTO guests (guest_id, full_name)
+VALUES (1, 'Anna Silva');
+
+UPDATE guests
+SET full_name = 'Anna Costa'
+WHERE guest_id = 1;
+
+DELETE FROM guests
+WHERE guest_id = 1;
+
+SELECT * FROM guests;</code></pre>
+            <aside class="callout callout--error">
+              <h4>Типичная ошибка</h4>
+              <p>
+                <code>DELETE * FROM XPTO</code> неверно. Правильно:
+                <code>DELETE FROM XPTO</code>.
+              </p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>DML получает, добавляет, меняет и удаляет записи.</p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-dcl"
+          data-topic="dcl"
+          data-search="DCL — управление разрешениями DCL определяет или изменяет права пользователей."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>DCL — управление разрешениями</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            DCL определяет или изменяет права пользователей.
+          </p>
+          <div class="topic-card__content">
+            <pre><code>GRANT SELECT ON products TO public;
+DENY DELETE ON products TO trainee;
+REVOKE SELECT ON products FROM trainee;</code></pre>
+            <dl>
+              <dt>GRANT</dt>
+              <dd>Выдать право.</dd>
+              <dt>DENY</dt>
+              <dd>Запретить.</dd>
+              <dt>REVOKE</dt>
+              <dd>Отозвать право.</dd>
+            </dl>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>DCL определяет или изменяет права пользователей.</p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-types"
+          data-topic="types"
+          data-search="Типы данных Тип данных определяет, какие значения можно хранить в столбце."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Типы данных</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            Тип данных определяет, какие значения можно хранить в столбце.
+          </p>
+          <div class="topic-card__content">
+            <table>
+              <caption>
+                Основные типы
+              </caption>
+              <thead>
+                <tr>
+                  <th>Тип</th>
+                  <th>Назначение</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>INT</td>
+                  <td>Целые числа</td>
+                </tr>
+                <tr>
+                  <td>VARCHAR(n)</td>
+                  <td>Текст переменной длины</td>
+                </tr>
+                <tr>
+                  <td>CHAR(n)</td>
+                  <td>Текст фиксированной длины</td>
+                </tr>
+                <tr>
+                  <td>TEXT</td>
+                  <td>Большой текст</td>
+                </tr>
+                <tr>
+                  <td>DATE</td>
+                  <td>Дата</td>
+                </tr>
+              </tbody>
+            </table>
+            <aside class="callout callout--exam">
+              <h4>На экзамене</h4>
+              <p>
+                Для названий стран: <strong>VARCHAR(100)</strong>. Длина разная,
+                а 20 символов может не хватить.
+              </p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>
+              Тип данных определяет, какие значения можно хранить в столбце.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-keys"
+          data-topic="keys"
+          data-search="PRIMARY KEY и FOREIGN KEY PRIMARY KEY однозначно определяет строку. FOREIGN KEY ссылается на ключ другой таблицы."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>PRIMARY KEY и FOREIGN KEY</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            PRIMARY KEY однозначно определяет строку. FOREIGN KEY ссылается на
+            ключ другой таблицы.
+          </p>
+          <div class="topic-card__content">
+            <pre><code>CREATE TABLE customers (
+    customer_id INT PRIMARY KEY,
+    customer_name VARCHAR(100)
+);
+
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    FOREIGN KEY (customer_id)
+        REFERENCES customers(customer_id)
+);</code></pre>
+            <aside class="callout callout--memory">
+              <h4>Как запомнить</h4>
+              <p>
+                PRIMARY — главный идентификатор. FOREIGN — ссылка в другую
+                таблицу.
+              </p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>
+              PRIMARY KEY однозначно определяет строку. FOREIGN KEY ссылается на
+              ключ другой таблицы.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-tsql"
+          data-topic="tsql"
+          data-search="Элементы Transact-SQL T-SQL включает пакеты, комментарии, переменные, функции, операторы и управление потоком."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Элементы Transact-SQL</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            T-SQL включает пакеты, комментарии, переменные, функции, операторы и
+            управление потоком.
+          </p>
+          <div class="topic-card__content">
+            <ul>
+              <li>
+                GO разделяет пакеты, но не является настоящей T-SQL-командой;
+              </li>
+              <li>EXEC запускает процедуру или динамическую команду;</li>
+              <li>комментарии: <code>--</code> и <code>/* ... */</code>;</li>
+              <li>переменные начинаются с <code>@</code>;</li>
+              <li>BEGIN…END, IF…ELSE, WHILE и CASE управляют потоком.</li>
+            </ul>
+            <pre><code>DECLARE @price INT;
+SET @price = 100;
+
+IF @price &gt; 50
+BEGIN
+    SELECT 'Дорого' AS result;
+END
+ELSE
+BEGIN
+    SELECT 'Недорого' AS result;
+END
+GO</code></pre>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>
+              T-SQL включает пакеты, комментарии, переменные, функции, операторы
+              и управление потоком.
+            </p>
+          </aside>
+        </article>
+      </section>
+      <section
+        id="queries"
+        class="course-section"
+        data-section="queries"
+        data-category="sql"
+        data-title="SELECT и фильтрация данных"
+        aria-labelledby="queries-title"
+      >
+        <header class="section-header">
+          <p>Раздел 3</p>
+          <h2 id="queries-title">SELECT и фильтрация данных</h2>
+        </header>
+        <article
+          class="topic-card"
+          id="topic-select"
+          data-topic="select"
+          data-search="SELECT SELECT определяет столбцы, FROM — источник данных."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>SELECT</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            SELECT определяет столбцы, FROM — источник данных.
+          </p>
+          <div class="topic-card__content">
+            <pre><code>SELECT employeeid, lastname, firstname, title
+FROM employees;
+
+SELECT *
+FROM employees;</code></pre>
+            <aside class="callout callout--exam">
+              <h4>Функция звёздочки</h4>
+              <p>
+                В SELECT <code>*</code> выбирает все столбцы. В COUNT(*) считает
+                все строки.
+              </p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>SELECT определяет столбцы, FROM — источник данных.</p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-where"
+          data-topic="where"
+          data-search="WHERE и сравнения WHERE ограничивает строки условием."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>WHERE и сравнения</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">WHERE ограничивает строки условием.</p>
+          <div class="topic-card__content">
+            <pre><code>SELECT employeeid, lastname
+FROM employees
+WHERE employeeid = 5;</code></pre>
+            <table>
+              <caption>
+                Операторы
+              </caption>
+              <tbody>
+                <tr>
+                  <th>=</th>
+                  <td>равно</td>
+                </tr>
+                <tr>
+                  <th>&lt;&gt;</th>
+                  <td>не равно</td>
+                </tr>
+                <tr>
+                  <th>&gt;</th>
+                  <td>больше</td>
+                </tr>
+                <tr>
+                  <th>&lt;</th>
+                  <td>меньше</td>
+                </tr>
+                <tr>
+                  <th>&gt;=</th>
+                  <td>больше или равно</td>
+                </tr>
+                <tr>
+                  <th>&lt;=</th>
+                  <td>меньше или равно</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>WHERE ограничивает строки условием.</p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-filters"
+          data-topic="filters"
+          data-search="LIKE, AND, OR, BETWEEN, IN, NULL Фильтры позволяют задавать точные и шаблонные условия."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>LIKE, AND, OR, BETWEEN, IN, NULL</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            Фильтры позволяют задавать точные и шаблонные условия.
+          </p>
+          <div class="topic-card__content">
+            <pre><code>SELECT companyname
+FROM customers
+WHERE companyname LIKE '%Restaurant%';
+
+SELECT productname, unitprice
+FROM products
+WHERE unitprice BETWEEN 10 AND 20;
+
+SELECT companyname, country
+FROM suppliers
+WHERE country IN ('Japan', 'Italy');
+
+SELECT companyname, fax
+FROM suppliers
+WHERE fax IS NULL;</code></pre>
+            <aside class="callout callout--error">
+              <h4>Типичная ошибка</h4>
+              <p>Не пиши <code>= NULL</code>. Пиши <code>IS NULL</code>.</p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>Фильтры позволяют задавать точные и шаблонные условия.</p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-format"
+          data-topic="format"
+          data-search="ORDER BY, DISTINCT и AS ORDER BY сортирует, DISTINCT убирает повторения, AS задаёт псевдоним."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>ORDER BY, DISTINCT и AS</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            ORDER BY сортирует, DISTINCT убирает повторения, AS задаёт
+            псевдоним.
+          </p>
+          <div class="topic-card__content">
+            <pre><code>SELECT productid, productname, categoryid, unitprice
+FROM products
+ORDER BY categoryid, unitprice DESC;
+
+SELECT DISTINCT country
+FROM customers;
+
+SELECT productname AS product,
+       unitprice AS price
+FROM products;</code></pre>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>
+              ORDER BY сортирует, DISTINCT убирает повторения, AS задаёт
+              псевдоним.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-top"
+          data-topic="top"
+          data-search="TOP n и WITH TIES В SQL Server TOP ограничивает число первых строк результата."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>TOP n и WITH TIES</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            В SQL Server TOP ограничивает число первых строк результата.
+          </p>
+          <div class="topic-card__content">
+            <pre><code>SELECT TOP 5 orderid, productid, quantity
+FROM [order details]
+ORDER BY quantity DESC;
+
+SELECT TOP 5 WITH TIES orderid, productid, quantity
+FROM [order details]
+ORDER BY quantity DESC;</code></pre>
+            <p>
+              WITH TIES добавляет строки с тем же значением сортировки, что у
+              последней выбранной строки.
+            </p>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>В SQL Server TOP ограничивает число первых строк результата.</p>
+          </aside>
+        </article>
+      </section>
+      <section
+        id="joins"
+        class="course-section"
+        data-section="joins"
+        data-category="sql"
+        data-title="Связи таблиц и JOIN"
+        aria-labelledby="joins-title"
+      >
+        <header class="section-header">
+          <p>Раздел 4</p>
+          <h2 id="joins-title">Связи таблиц и JOIN</h2>
+        </header>
+        <article
+          class="topic-card"
+          id="topic-join"
+          data-topic="join"
+          data-search="JOIN и ON JOIN объединяет связанные строки из нескольких таблиц. ON задаёт условие связи."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>JOIN и ON</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            JOIN объединяет связанные строки из нескольких таблиц. ON задаёт
+            условие связи.
+          </p>
+          <div class="topic-card__content">
+            <pre><code>SELECT b.buyer_name, s.buyer_id, s.qty
+FROM buyers AS b
+INNER JOIN sales AS s
+    ON b.buyer_id = s.buyer_id;</code></pre>
+            <aside class="callout callout--exam">
+              <h4>Как объяснить преподавателю</h4>
+              <p>
+                JOIN связывает таблицы, обычно по PRIMARY KEY и FOREIGN KEY. ON
+                указывает общие столбцы.
+              </p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>
+              JOIN объединяет связанные строки из нескольких таблиц. ON задаёт
+              условие связи.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-join-types"
+          data-topic="join-types"
+          data-search="Типы JOIN Разные JOIN по-разному обрабатывают несовпавшие строки."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Типы JOIN</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            Разные JOIN по-разному обрабатывают несовпавшие строки.
+          </p>
+          <div class="topic-card__content">
+            <table>
+              <caption>
+                Типы соединения
+              </caption>
+              <tbody>
+                <tr>
+                  <th>INNER JOIN</th>
+                  <td>Только совпадения</td>
+                </tr>
+                <tr>
+                  <th>LEFT JOIN</th>
+                  <td>Все строки слева и совпадения справа</td>
+                </tr>
+                <tr>
+                  <th>RIGHT JOIN</th>
+                  <td>Все строки справа и совпадения слева</td>
+                </tr>
+                <tr>
+                  <th>FULL OUTER JOIN</th>
+                  <td>Все строки обеих таблиц</td>
+                </tr>
+                <tr>
+                  <th>CROSS JOIN</th>
+                  <td>Все возможные комбинации</td>
+                </tr>
+                <tr>
+                  <th>SELF JOIN</th>
+                  <td>Таблица соединяется сама с собой</td>
+                </tr>
+              </tbody>
+            </table>
+            <pre><code>SELECT c.customer_name, o.order_id
+FROM customers AS c
+LEFT JOIN orders AS o
+    ON c.customer_id = o.customer_id;</code></pre>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>Разные JOIN по-разному обрабатывают несовпавшие строки.</p>
+          </aside>
+        </article>
+      </section>
+      <section
+        id="aggregation"
+        class="course-section"
+        data-section="aggregation"
+        data-category="sql"
+        data-title="Агрегация данных"
+        aria-labelledby="aggregation-title"
+      >
+        <header class="section-header">
+          <p>Раздел 5</p>
+          <h2 id="aggregation-title">Агрегация данных</h2>
+        </header>
+        <article
+          class="topic-card"
+          id="topic-aggregates"
+          data-topic="aggregates"
+          data-search="COUNT, SUM, AVG, MIN и MAX Агрегатные функции вычисляют одно итоговое значение по набору строк."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>COUNT, SUM, AVG, MIN и MAX</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            Агрегатные функции вычисляют одно итоговое значение по набору строк.
+          </p>
+          <div class="topic-card__content">
+            <table>
+              <caption>
+                Агрегатные функции
+              </caption>
+              <tbody>
+                <tr>
+                  <th>COUNT</th>
+                  <td>Количество значений</td>
+                </tr>
+                <tr>
+                  <th>COUNT(*)</th>
+                  <td>Количество строк</td>
+                </tr>
+                <tr>
+                  <th>SUM</th>
+                  <td>Сумма</td>
+                </tr>
+                <tr>
+                  <th>AVG</th>
+                  <td>Среднее</td>
+                </tr>
+                <tr>
+                  <th>MIN</th>
+                  <td>Минимум</td>
+                </tr>
+                <tr>
+                  <th>MAX</th>
+                  <td>Максимум</td>
+                </tr>
+                <tr>
+                  <th>STDEV/STDEVP</th>
+                  <td>Стандартное отклонение</td>
+                </tr>
+                <tr>
+                  <th>VAR/VARP</th>
+                  <td>Дисперсия</td>
+                </tr>
+              </tbody>
+            </table>
+            <pre><code>SELECT COUNT(*) AS employee_count,
+       AVG(unitprice) AS average_price,
+       MIN(unitprice) AS minimum_price,
+       MAX(unitprice) AS maximum_price,
+       SUM(unitprice) AS total_price
+FROM products;</code></pre>
+            <aside class="callout callout--important">
+              <h4>NULL</h4>
+              <p>
+                Большинство агрегатов игнорирует NULL. COUNT(*) считает все
+                строки.
+              </p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>
+              Агрегатные функции вычисляют одно итоговое значение по набору
+              строк.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-group"
+          data-topic="group"
+          data-search="GROUP BY GROUP BY объединяет строки с одинаковым значением в группы."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>GROUP BY</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            GROUP BY объединяет строки с одинаковым значением в группы.
+          </p>
+          <div class="topic-card__content">
+            <pre><code>SELECT productid,
+       SUM(quantity) AS total_quantity
+FROM orderhist
+GROUP BY productid;</code></pre>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>GROUP BY объединяет строки с одинаковым значением в группы.</p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-having"
+          data-topic="having"
+          data-search="HAVING HAVING фильтрует сформированные группы."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>HAVING</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            HAVING фильтрует сформированные группы.
+          </p>
+          <div class="topic-card__content">
+            <pre><code>SELECT customer_id,
+       COUNT(*) AS order_count
+FROM orders
+GROUP BY customer_id
+HAVING COUNT(*) &gt; 5;</code></pre>
+            <aside class="callout callout--compare">
+              <h4>WHERE или HAVING</h4>
+              <p>
+                WHERE фильтрует строки до группировки. HAVING фильтрует группы
+                после GROUP BY.
+              </p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>HAVING фильтрует сформированные группы.</p>
+          </aside>
+        </article>
+      </section>
+      <section
+        id="transactions"
+        class="course-section"
+        data-section="transactions"
+        data-category="sql"
+        data-title="Транзакции и серверная логика"
+        aria-labelledby="transactions-title"
+      >
+        <header class="section-header">
+          <p>Раздел 6</p>
+          <h2 id="transactions-title">Транзакции и серверная логика</h2>
+        </header>
+        <article
+          class="topic-card"
+          id="topic-transaction"
+          data-topic="transaction"
+          data-search="COMMIT и ROLLBACK Транзакция объединяет действия: они применяются вместе или отменяются вместе."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>COMMIT и ROLLBACK</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            Транзакция объединяет действия: они применяются вместе или
+            отменяются вместе.
+          </p>
+          <div class="topic-card__content">
+            <pre><code>BEGIN TRANSACTION;
+
+UPDATE savings
+SET balance = balance - 100
+WHERE custid = 78910;
+
+UPDATE checking
+SET balance = balance + 100
+WHERE custid = 78910;
+
+COMMIT TRANSACTION;</code></pre>
+            <dl>
+              <dt>COMMIT</dt>
+              <dd>Сохранить изменения.</dd>
+              <dt>ROLLBACK</dt>
+              <dd>Отменить изменения.</dd>
+            </dl>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>
+              Транзакция объединяет действия: они применяются вместе или
+              отменяются вместе.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-trigger"
+          data-topic="trigger"
+          data-search="Trigger Trigger автоматически запускается при событии над таблицей."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Trigger</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            Trigger автоматически запускается при событии над таблицей.
+          </p>
+          <div class="topic-card__content">
+            <ul>
+              <li>INSERT</li>
+              <li>UPDATE</li>
+              <li>DELETE</li>
+            </ul>
+            <pre><code>CREATE TRIGGER trg_order_log
+ON orders
+AFTER INSERT
+AS
+BEGIN
+    INSERT INTO order_log (event_name)
+    VALUES ('INSERT');
+END;</code></pre>
+            <aside class="callout callout--exam">
+              <h4>На экзамене</h4>
+              <p>
+                Правильный набор событий: INSERT, UPDATE, DELETE. SELECT не
+                изменяет таблицу.
+              </p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>Trigger автоматически запускается при событии над таблицей.</p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-procedure"
+          data-topic="procedure"
+          data-search="Stored Procedure Stored Procedure — сохранённая на сервере последовательность SQL-команд."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Stored Procedure</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            Stored Procedure — сохранённая на сервере последовательность
+            SQL-команд.
+          </p>
+          <div class="topic-card__content">
+            <pre><code>CREATE PROCEDURE GetCustomerOrders
+    @CustomerId INT
+AS
+BEGIN
+    SELECT *
+    FROM orders
+    WHERE customer_id = @CustomerId;
+END;
+
+EXEC GetCustomerOrders @CustomerId = 10;</code></pre>
+            <ul>
+              <li>быстрое повторное выполнение;</li>
+              <li>централизованная логика;</li>
+              <li>контроль доступа;</li>
+              <li>меньше повторения SQL-кода.</li>
+            </ul>
+            <aside class="callout callout--exam">
+              <h4>На экзамене</h4>
+              <p>
+                Из вариантов преимущество Stored Procedure —
+                <strong>скорость</strong>.
+              </p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>
+              Stored Procedure — сохранённая на сервере последовательность
+              SQL-команд.
+            </p>
+          </aside>
+        </article>
+      </section>
+      <section
+        id="mysql"
+        class="course-section"
+        data-section="mysql"
+        data-category="mysql"
+        data-title="MySQL и InnoDB"
+        aria-labelledby="mysql-title"
+      >
+        <header class="section-header">
+          <p>Раздел 7</p>
+          <h2 id="mysql-title">MySQL и InnoDB</h2>
+        </header>
+        <article
+          class="topic-card"
+          id="topic-mysql"
+          data-topic="mysql"
+          data-search="Что такое MySQL MySQL — реляционная СУБД с открытым исходным кодом, развиваемая в портфеле Oracle."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Что такое MySQL</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            MySQL — реляционная СУБД с открытым исходным кодом, развиваемая в
+            портфеле Oracle.
+          </p>
+          <div class="topic-card__content">
+            <p>
+              Архитектура MySQL основана на подключаемых механизмах хранения.
+              Это позволило развить InnoDB и NDB.
+            </p>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>
+              MySQL — реляционная СУБД с открытым исходным кодом, развиваемая в
+              портфеле Oracle.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-install"
+          data-topic="install"
+          data-search="Установка MySQL в Windows и Linux В Windows используется официальный installer, в Linux — пакетный менеджер и служба."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Установка MySQL в Windows и Linux</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            В Windows используется официальный installer, в Linux — пакетный
+            менеджер и служба.
+          </p>
+          <div class="topic-card__content">
+            <h4>Windows</h4>
+            <ol>
+              <li>Скачать MySQL Installer.</li>
+              <li>Установить MySQL Server и инструменты.</li>
+              <li>Настроить порт 3306 и пароль root.</li>
+              <li>Запустить службу и проверить подключение.</li>
+            </ol>
+            <h4>Linux</h4>
+            <pre><code>sudo apt update
+sudo apt install mysql-server
+sudo systemctl start mysql
+sudo systemctl enable mysql
+sudo mysql_secure_installation
+mysql -u root -p</code></pre>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>
+              В Windows используется официальный installer, в Linux — пакетный
+              менеджер и служба.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-innodb"
+          data-topic="innodb"
+          data-search="InnoDB InnoDB — транзакционный механизм хранения MySQL."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>InnoDB</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            InnoDB — транзакционный механизм хранения MySQL.
+          </p>
+          <div class="topic-card__content">
+            <ul>
+              <li>транзакции;</li>
+              <li>COMMIT и ROLLBACK;</li>
+              <li>внешние ключи;</li>
+              <li>блокировки;</li>
+              <li>восстановление после сбоя.</li>
+            </ul>
+            <pre><code>CREATE TABLE payments (
+    payment_id INT PRIMARY KEY,
+    amount INT
+) ENGINE=InnoDB;</code></pre>
+            <aside class="callout callout--memory">
+              <h4>Запомни</h4>
+              <p>
+                InnoDB — движок. InnoDB Cluster — архитектура высокой
+                доступности.
+              </p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>InnoDB — транзакционный механизм хранения MySQL.</p>
+          </aside>
+        </article>
+      </section>
+      <section
+        id="clusters"
+        class="course-section"
+        data-section="clusters"
+        data-category="cluster"
+        data-title="Репликация и кластеры MySQL"
+        aria-labelledby="clusters-title"
+      >
+        <header class="section-header">
+          <p>Раздел 8</p>
+          <h2 id="clusters-title">Репликация и кластеры MySQL</h2>
+        </header>
+        <article
+          class="topic-card"
+          id="topic-replication"
+          data-topic="replication"
+          data-search="Репликация Репликация создаёт и обновляет копии данных на нескольких серверах."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Репликация</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            Репликация создаёт и обновляет копии данных на нескольких серверах.
+          </p>
+          <div class="topic-card__content">
+            <table>
+              <caption>
+                Режимы репликации
+              </caption>
+              <tbody>
+                <tr>
+                  <th>Асинхронный</th>
+                  <td>
+                    Быстро, но возможна потеря последних изменений при падении
+                    master.
+                  </td>
+                </tr>
+                <tr>
+                  <th>Полусинхронный</th>
+                  <td>
+                    Master ждёт подтверждения получения изменения репликой.
+                  </td>
+                </tr>
+                <tr>
+                  <th>Виртуально-синхронный</th>
+                  <td>Group Replication в InnoDB Cluster.</td>
+                </tr>
+                <tr>
+                  <th>Синхронный</th>
+                  <td>NDB Cluster подтверждает применение на узлах.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>
+              Репликация создаёт и обновляет копии данных на нескольких
+              серверах.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-innodb-cluster"
+          data-topic="innodb-cluster"
+          data-search="InnoDB Cluster InnoDB Cluster объединяет Group Replication, MySQL Router и MySQL Shell."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>InnoDB Cluster</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            InnoDB Cluster объединяет Group Replication, MySQL Router и MySQL
+            Shell.
+          </p>
+          <div class="topic-card__content">
+            <dl>
+              <dt>Group Replication</dt>
+              <dd>Согласует узлы и выбирает PRIMARY.</dd>
+              <dt>MySQL Router</dt>
+              <dd>Направляет подключения.</dd>
+              <dt>MySQL Shell</dt>
+              <dd>Настраивает и управляет кластером.</dd>
+            </dl>
+            <h4>Требования</h4>
+            <ul>
+              <li>InnoDB;</li>
+              <li>явный PRIMARY KEY в каждой реплицируемой таблице;</li>
+              <li>IPv4;</li>
+              <li>быстрая сеть;</li>
+              <li>кворум.</li>
+            </ul>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>
+              InnoDB Cluster объединяет Group Replication, MySQL Router и MySQL
+              Shell.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-cluster-install"
+          data-topic="cluster-install"
+          data-search="Схема создания InnoDB Cluster Обычно готовят три сервера, конфигурируют инстанции и подключают Router."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Схема создания InnoDB Cluster</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            Обычно готовят три сервера, конфигурируют инстанции и подключают
+            Router.
+          </p>
+          <div class="topic-card__content">
+            <ol>
+              <li>Три машины с разными hostname.</li>
+              <li>MySQL Server и MySQL Shell.</li>
+              <li>Административный пользователь.</li>
+              <li>dba.configureInstance для каждого узла.</li>
+              <li>dba.createCluster.</li>
+              <li>cluster.addInstance.</li>
+              <li>MySQL Router.</li>
+              <li>Проверка failover.</li>
+            </ol>
+            <pre><code>sudo apt install mysql-server mysql-shell -y
+
+mysqlsh
+\connect admin@innodb1
+dba.configureInstance('admin@innodb1');
+var cluster = dba.createCluster('studyCluster');
+cluster.addInstance('admin@innodb2');
+cluster.addInstance('admin@innodb3');
+cluster.status();</code></pre>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>
+              Обычно готовят три сервера, конфигурируют инстанции и подключают
+              Router.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-ndb"
+          data-topic="ndb"
+          data-search="MySQL Cluster / NDB Cluster MySQL NDB Cluster — распределённая shared-nothing база для высокой доступности и OLTP."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>MySQL Cluster / NDB Cluster</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            MySQL NDB Cluster — распределённая shared-nothing база для высокой
+            доступности и OLTP.
+          </p>
+          <div class="topic-card__content">
+            <h4>Компоненты</h4>
+            <ul>
+              <li>Management Node — конфигурация и управление;</li>
+              <li>Data/Storage Node — хранение данных;</li>
+              <li>SQL/API Node — SQL и приложения;</li>
+              <li>Node Group — реплики фрагментов.</li>
+            </ul>
+            <h4>Плюсы</h4>
+            <ul>
+              <li>синхронная репликация;</li>
+              <li>автоматическое sharding;</li>
+              <li>масштабирование чтения и записи;</li>
+              <li>географическая репликация;</li>
+              <li>высокая доступность.</li>
+            </ul>
+            <h4>Минусы</h4>
+            <ul>
+              <li>сложная эксплуатация;</li>
+              <li>не лучший вариант для тяжёлого OLAP.</li>
+            </ul>
+            <pre><code>[ndbd default]
+DataDir=/var/lib/mysql-cluster
+NoOfReplicas=2
+
+[ndbd]
+NodeId=2
+Hostname=192.168.0.102
+
+[ndbd]
+NodeId=3
+Hostname=192.168.0.103</code></pre>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>
+              MySQL NDB Cluster — распределённая shared-nothing база для высокой
+              доступности и OLTP.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-cluster-answer"
+          data-topic="cluster-answer"
+          data-search="Готовый ответ о кластере Да, MySQL поддерживает несколько кластерных решений."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Готовый ответ о кластере</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            Да, MySQL поддерживает несколько кластерных решений.
+          </p>
+          <div class="topic-card__content">
+            <blockquote>
+              Можно создать InnoDB Cluster на основе Group Replication, MySQL
+              Router и MySQL Shell. Также существует MySQL NDB Cluster с
+              management nodes, data nodes и SQL/API nodes.
+            </blockquote>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>Да, MySQL поддерживает несколько кластерных решений.</p>
+          </aside>
+        </article>
+      </section>
+      <section
+        id="nosql"
+        class="course-section"
+        data-section="nosql"
+        data-category="nosql"
+        data-title="NoSQL, MongoDB и Neo4j"
+        aria-labelledby="nosql-title"
+      >
+        <header class="section-header">
+          <p>Раздел 9</p>
+          <h2 id="nosql-title">NoSQL, MongoDB и Neo4j</h2>
+        </header>
+        <article
+          class="topic-card"
+          id="topic-nosql"
+          data-topic="nosql"
+          data-search="Что такое NoSQL NoSQL — группа нереляционных подходов для задач, где табличная модель неудобна."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Что такое NoSQL</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            NoSQL — группа нереляционных подходов для задач, где табличная
+            модель неудобна.
+          </p>
+          <div class="topic-card__content">
+            <ul>
+              <li>высокая производительность;</li>
+              <li>горизонтальное масштабирование;</li>
+              <li>устойчивость к отказам;</li>
+              <li>гибкая схема;</li>
+              <li>часто open source.</li>
+            </ul>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>
+              NoSQL — группа нереляционных подходов для задач, где табличная
+              модель неудобна.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-nosql-types"
+          data-topic="nosql-types"
+          data-search="Типы NoSQL Основные модели: column, document, key-value, graph и multi-model."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Типы NoSQL</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            Основные модели: column, document, key-value, graph и multi-model.
+          </p>
+          <div class="topic-card__content">
+            <table>
+              <caption>
+                Модели NoSQL
+              </caption>
+              <tbody>
+                <tr>
+                  <th>Column</th>
+                  <td>Cassandra, HBase, BigTable</td>
+                </tr>
+                <tr>
+                  <th>Document</th>
+                  <td>MongoDB, CouchDB, Couchbase</td>
+                </tr>
+                <tr>
+                  <th>Key-value</th>
+                  <td>Redis, Riak, Dynamo</td>
+                </tr>
+                <tr>
+                  <th>Graph</th>
+                  <td>Neo4j, InfiniteGraph</td>
+                </tr>
+                <tr>
+                  <th>Multi-model</th>
+                  <td>OrientDB, ArangoDB</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>
+              Основные модели: column, document, key-value, graph и multi-model.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-mongodb"
+          data-topic="mongodb"
+          data-search="MongoDB MongoDB — документная NoSQL-СУБД, хранящая BSON-документы в коллекциях."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>MongoDB</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            MongoDB — документная NoSQL-СУБД, хранящая BSON-документы в
+            коллекциях.
+          </p>
+          <div class="topic-card__content">
+            <dl>
+              <dt>Document</dt>
+              <dd>Один объект, похожий на JSON.</dd>
+              <dt>Collection</dt>
+              <dd>Набор документов.</dd>
+              <dt>Field</dt>
+              <dd>Поле документа.</dd>
+              <dt>_id</dt>
+              <dd>Уникальный идентификатор.</dd>
+            </dl>
+            <pre><code>{
+  "_id": 1,
+  "name": "Hotel Princesa",
+  "city": "Vila do Conde",
+  "rooms": 10,
+  "features": ["terrace", "kitchen", "wifi"]
+}</code></pre>
+            <h4>Когда применять</h4>
+            <ul>
+              <li>гибкая структура;</li>
+              <li>вложенные объекты и массивы;</li>
+              <li>часто меняющаяся схема;</li>
+              <li>объект удобно хранить одним документом.</li>
+            </ul>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>
+              MongoDB — документная NoSQL-СУБД, хранящая BSON-документы в
+              коллекциях.
+            </p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-mongo-commands"
+          data-topic="mongo-commands"
+          data-search="Команды MongoDB MongoDB имеет команды для баз, коллекций и CRUD документов."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Команды MongoDB</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            MongoDB имеет команды для баз, коллекций и CRUD документов.
+          </p>
+          <div class="topic-card__content">
+            <pre><code>db
+show collections
+use hotel_db
+
+db.guests.insertOne({ name: "Anna", country: "Portugal" })
+db.guests.find()
+db.guests.findOne({ name: "Anna" })
+db.guests.updateOne(
+  { name: "Anna" },
+  { $set: { country: "Spain" } }
+)
+db.guests.deleteOne({ name: "Anna" })
+db.guests.drop()
+db.dropDatabase()</code></pre>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>MongoDB имеет команды для баз, коллекций и CRUD документов.</p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-mongo-os"
+          data-topic="mongo-os"
+          data-search="MongoDB в Windows и Linux MongoDB может работать и в Windows, и в Linux."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>MongoDB в Windows и Linux</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            MongoDB может работать и в Windows, и в Linux.
+          </p>
+          <div class="topic-card__content">
+            <aside class="callout callout--exam">
+              <h4>На экзамене</h4>
+              <p>
+                Для обеих ОС существуют серверные сборки и клиентские
+                инструменты MongoDB.
+              </p>
+            </aside>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>MongoDB может работать и в Windows, и в Linux.</p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-neo4j"
+          data-topic="neo4j"
+          data-search="Neo4j Neo4j — графовая база данных для данных, где важны связи."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Neo4j</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            Neo4j — графовая база данных для данных, где важны связи.
+          </p>
+          <div class="topic-card__content">
+            <dl>
+              <dt>Node</dt>
+              <dd>Узел, объект.</dd>
+              <dt>Relationship</dt>
+              <dd>Направленная связь.</dd>
+              <dt>Property</dt>
+              <dd>Свойство узла или связи.</dd>
+              <dt>Label</dt>
+              <dd>Категория узла.</dd>
+            </dl>
+            <pre><code>(Guest {name: "Anna"})
+    -[:BOOKED]-&gt;
+(Room {number: 204})</code></pre>
+            <h4>Применение</h4>
+            <ul>
+              <li>социальные сети;</li>
+              <li>рекомендации;</li>
+              <li>маршруты;</li>
+              <li>поиск мошенничества;</li>
+              <li>сети зависимостей;</li>
+              <li>knowledge graph.</li>
+            </ul>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>Neo4j — графовая база данных для данных, где важны связи.</p>
+          </aside>
+        </article>
+        <article
+          class="topic-card"
+          id="topic-table-graph"
+          data-topic="table-graph"
+          data-search="Таблица и граф Таблица хранит строки и столбцы. Граф хранит узлы и явные связи."
+          data-complete="false"
+        >
+          <header class="topic-card__header">
+            <h3>Таблица и граф</h3>
+            <button
+              type="button"
+              aria-pressed="false"
+              aria-label="Отметить тему как изученную"
+              data-action="complete-topic"
+            >
+              Отметить изученной
+            </button>
+          </header>
+          <p class="topic-card__summary">
+            Таблица хранит строки и столбцы. Граф хранит узлы и явные связи.
+          </p>
+          <div class="topic-card__content">
+            <table>
+              <caption>
+                Сравнение
+              </caption>
+              <tbody>
+                <tr>
+                  <th>Таблица</th>
+                  <th>Граф</th>
+                </tr>
+                <tr>
+                  <td>Строки и столбцы</td>
+                  <td>Узлы, связи и свойства</td>
+                </tr>
+                <tr>
+                  <td>Связи через ключи и JOIN</td>
+                  <td>Связи хранятся прямо</td>
+                </tr>
+                <tr>
+                  <td>Структурированные записи</td>
+                  <td>Сложные сети отношений</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <details class="exam-prompt">
+            <summary>Как преподаватель может спросить</summary>
+            <p>
+              Дайте определение, объясните назначение, назовите основные
+              элементы и приведите короткий пример.
+            </p>
+          </details>
+          <aside class="callout callout--fallback">
+            <h4>Если забыл определение</h4>
+            <p>
+              Таблица хранит строки и столбцы. Граф хранит узлы и явные связи.
+            </p>
+          </aside>
+        </article>
+      </section>
+      <section
+        id="exam"
+        class="course-section"
+        data-section="exam"
+        data-category="exam"
+        aria-labelledby="exam-title"
+      >
+        <header class="section-header">
+          <p>Финальный раздел</p>
+          <h2 id="exam-title">Экзаменационная проверка</h2>
+          <p>Ответь сам, затем раскрой ответ.</p>
+        </header>
+        <form class="mini-test" data-quiz="database-final">
+          <fieldset>
+            <legend>Тестовые вопросы</legend>
+            <article data-question="1">
+              <h3>1. Какие события запускают trigger таблицы?</h3>
+              <label
+                ><input type="radio" name="q1" value="a" /> INSERT, UPDATE,
+                DELETE</label
+              ><label
+                ><input type="radio" name="q1" value="b" /> SELECT, INSERT,
+                UPDATE, DELETE</label
+              ><label
+                ><input type="radio" name="q1" value="c" /> INSERT,
+                UPDATE</label
+              >
+              <details data-answer="a">
+                <summary>Ответ</summary>
+                <p>INSERT, UPDATE, DELETE.</p>
+              </details>
+            </article>
+            <article data-question="2">
+              <h3>2. Для чего созданы СУБД?</h3>
+              <label
+                ><input type="radio" name="q2" value="a" /> Для организации и
+                управления БД</label
+              ><label
+                ><input type="radio" name="q2" value="b" /> Только для
+                процедур</label
+              ><label
+                ><input type="radio" name="q2" value="c" /> Только для
+                Jobs</label
+              >
+              <details data-answer="a">
+                <summary>Ответ</summary>
+                <p>
+                  Для организации и управления одной или несколькими базами
+                  данных.
+                </p>
+              </details>
+            </article>
+            <article data-question="3">
+              <h3>3. Тип для названий стран</h3>
+              <label
+                ><input type="radio" name="q3" value="a" /> VARCHAR(20)</label
+              ><label
+                ><input type="radio" name="q3" value="b" /> VARCHAR(100)</label
+              ><label><input type="radio" name="q3" value="c" /> TEXT</label>
+              <details data-answer="b">
+                <summary>Ответ</summary>
+                <p>VARCHAR(100).</p>
+              </details>
+            </article>
+            <article data-question="4">
+              <h3>4. Ошибка в DELETE * FROM XPTO</h3>
+              <label><input type="radio" name="q4" value="a" /> Нет WHERE</label
+              ><label
+                ><input type="radio" name="q4" value="b" /> Нельзя указывать
+                *</label
+              ><label
+                ><input type="radio" name="q4" value="c" /> Нужен DROP</label
+              >
+              <details data-answer="b">
+                <summary>Ответ</summary>
+                <p>В DELETE нельзя указывать столбцы или звёздочку.</p>
+              </details>
+            </article>
+            <article data-question="5">
+              <h3>5. Преимущество Stored Procedure</h3>
+              <label><input type="radio" name="q5" value="a" /> Скорость</label
+              ><label
+                ><input type="radio" name="q5" value="b" /> Не нужно знать
+                SQL</label
+              ><label
+                ><input type="radio" name="q5" value="c" /> Автозапуск при
+                старте СУБД</label
+              >
+              <details data-answer="a">
+                <summary>Ответ</summary>
+                <p>Скорость.</p>
+              </details>
+            </article>
+            <button type="submit" data-action="grade-quiz">Проверить</button
+            ><button type="reset">Сбросить</button
+            ><output aria-live="polite" data-quiz-output
+              >Проверка будет работать после подключения JavaScript.</output
+            >
+          </fieldset>
+        </form>
+        <section class="open-questions" aria-labelledby="open-title">
+          <h3 id="open-title">Открытые вопросы</h3>
+          <details data-question="6">
+            <summary>6. Как установить MySQL в Linux и Windows?</summary>
+            <p>
+              Windows: официальный Installer, сервер, порт, пароль root, запуск
+              службы. Linux: пакетный менеджер, запуск службы, безопасная
+              настройка и проверка входа.
+            </p>
+          </details>
+          <details data-question="7">
+            <summary>7. Можно ли создать кластер MySQL?</summary>
+            <p>Да: InnoDB Cluster или MySQL NDB Cluster.</p>
+          </details>
+          <details data-question="8">
+            <summary>8. Создать БД, удалить запись, удалить БД</summary>
+            <pre><code>CREATE DATABASE database_name;
+DELETE FROM table_name WHERE id = 1;
+DROP DATABASE database_name;</code></pre>
+          </details>
+          <details data-question="9">
+            <summary>9. Что делает * в SQL?</summary>
+            <p>В SELECT выбирает все столбцы; в COUNT(*) считает все строки.</p>
+          </details>
+          <details data-question="10">
+            <summary>10. Что такое MongoDB и где работает?</summary>
+            <p>Документная NoSQL-СУБД, работающая в Windows и Linux.</p>
+          </details>
+          <details data-question="11">
+            <summary>11. Когда применять MongoDB?</summary>
+            <p>
+              Для гибких документов, вложенных структур, массивов и изменяющейся
+              схемы.
+            </p>
+          </details>
+          <details data-question="12">
+            <summary>12. MongoDB в Linux и Windows?</summary>
+            <p>Да, существуют версии для обеих платформ.</p>
+          </details>
+          <details data-question="13">
+            <summary>13. Когда применять Neo4j?</summary>
+            <p>
+              Когда важны сложные связи: социальные сети, маршруты,
+              рекомендации, мошенничество.
+            </p>
+          </details>
+          <details data-question="14">
+            <summary>14. Характеристики Neo4j</summary>
+            <p>Узлы, направленные связи, свойства и метки.</p>
+          </details>
+          <details data-question="15">
+            <summary>15. Таблица и граф</summary>
+            <p>
+              Таблица хранит строки и столбцы, граф — узлы и непосредственные
+              связи.
+            </p>
+          </details>
+        </section>
+      </section>
+      <section
+        id="final-check"
+        data-section="final-check"
+        aria-labelledby="final-title"
+      >
+        <h2 id="final-title">Финальная проверка</h2>
+        <form data-checklist="final">
+          <fieldset>
+            <legend>Я могу объяснить</legend>
+            <label
+              ><input type="checkbox" data-complete="ddl" />DDL, DML, DCL</label
+            >
+            <label
+              ><input type="checkbox" data-complete="delete-drop" />DELETE и
+              DROP</label
+            >
+            <label
+              ><input type="checkbox" data-complete="select" />SELECT и
+              WHERE</label
+            >
+            <label><input type="checkbox" data-complete="joins" />JOIN</label>
+            <label
+              ><input type="checkbox" data-complete="aggregation" />GROUP BY и
+              HAVING</label
+            >
+            <label
+              ><input type="checkbox" data-complete="transactions" />COMMIT и
+              ROLLBACK</label
+            >
+            <label
+              ><input type="checkbox" data-complete="trigger" />Trigger</label
+            >
+            <label
+              ><input type="checkbox" data-complete="procedure" />Stored
+              Procedure</label
+            >
+            <label
+              ><input type="checkbox" data-complete="clusters" />Кластеры
+              MySQL</label
+            >
+            <label
+              ><input type="checkbox" data-complete="mongodb" />MongoDB</label
+            >
+            <label><input type="checkbox" data-complete="neo4j" />Neo4j</label>
+          </fieldset>
+        </form>
+      </section>
+      <section id="faq" data-section="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">FAQ</h2>
+        <details>
+          <summary>Почему DELETE * неверно?</summary>
+          <p>DELETE удаляет строки, поэтому список столбцов не указывается.</p>
+        </details>
+        <details>
+          <summary>Почему WHERE и HAVING разные?</summary>
+          <p>WHERE фильтрует строки, HAVING — группы.</p>
+        </details>
+        <details>
+          <summary>MongoDB заменяет SQL?</summary>
+          <p>Нет. Это другая модель для других задач.</p>
+        </details>
+      </section>
+    </main>
+    <aside class="floating-study-panel" aria-label="Быстрая навигация">
+      <button
+        type="button"
+        aria-expanded="false"
+        aria-controls="floating-content"
+        data-action="toggle-study-panel"
+      >
+        Учебная панель
+      </button>
+      <div id="floating-content" hidden>
+        <a href="#top">Наверх</a><a href="#exam">Экзамен</a
+        ><output aria-live="polite">Прогресс: 0%</output>
+      </div>
+    </aside>
+    <footer class="site-footer" role="contentinfo">
+      <p>Учебный сайт по базам данных для подготовки к экзамену ISTEC.</p>
+      <nav aria-label="Навигация в подвале">
+        <a href="#top">Наверх</a><a href="#study-map">План</a
+        ><a href="#exam">Экзамен</a>
+      </nav>
+    </footer>
+    <div
+      id="notification-region"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+      data-notification-region
+    ></div>
+    <template id="search-result-template"
+      ><article data-search-result>
+        <h3 data-result-title></h3>
+        <p data-result-description></p>
+        <a href="#" data-result-link>Открыть тему</a>
+      </article></template
+    >
+    <template id="quiz-feedback-template"
+      ><div role="status"><p data-feedback-text></p></div
+    ></template>
+    <template id="progress-item-template"
+      ><li>
+        <span data-progress-title></span><span data-progress-status></span></li
+    ></template>
+    <noscript
+      ><p>
+        Материал доступен, но поиск, тест и прогресс требуют JavaScript.
+      </p></noscript
+    >
+  </body>
+</html>
